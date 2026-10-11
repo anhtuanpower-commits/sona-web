@@ -1,5 +1,15 @@
 [
   {
+    "slug": "the-tich-diem-khach-quen-bang-ai",
+    "tieu_de": "Nhờ AI soạn thể lệ thẻ tích điểm cho khách quen của tiệm",
+    "tom_tat": "Thẻ tích điểm đơn giản như 'làm đủ 5 lần tặng 1 lần' giúp khách có lý do quay lại. Nhờ ChatGPT soạn thể lệ ngắn, rõ, rồi in hoặc gửi khách qua Zalo.",
+    "chu_de": "Chăm khách",
+    "ngay": "2026-10-12",
+    "phut": 3,
+    "viec": "Hôm nay nhờ AI soạn thể lệ thẻ tích điểm 1 trang, sửa cho đúng tiệm mình rồi in dán ở quầy.",
+    "noi_dung": "Thẻ tích điểm là cách đơn giản để khách quen có thêm **lý do quay lại**. Cái khó là viết thể lệ sao cho khách đọc là hiểu, không cãi nhau lúc đổi quà.\n\n## Câu lệnh chép dùng ngay\n\n> Soạn thể lệ thẻ tích điểm cho tiệm [loại tiệm: spa, nail, tóc...] của tôi, dài dưới 120 chữ, câu ngắn, không dùng từ tiếng Anh. Chỉ dùng đúng thông tin tôi đưa, không tự thêm quà hay hứa hẹn khác, thiếu gì thì ghi [CẦN ĐIỀN]. Gồm: mỗi lần làm dịch vụ từ bao nhiêu tiền thì được 1 dấu, đủ bao nhiêu dấu thì được quà gì, quà dùng trong bao lâu, có được cộng chung với khuyến mãi khác không, mất thẻ thì sao. Thông tin: [số dấu, mức tiền tối thiểu, quà tặng, hạn dùng quà, cách tiệm ghi dấu].\n\n## Làm theo 3 bước\n\n- Tự quyết trước **số dấu và quà** sao cho tiệm vẫn có lãi, rồi điền vào cuối câu lệnh.\n- Dán vào ChatGPT, đọc lại; câu nào **không đúng cách tiệm làm** thì sửa hoặc xóa.\n- In thể lệ dán ở quầy và gửi khách qua Zalo khi khách nhận thẻ.\n\n## Trước khi dùng, soát 3 điều\n\n- Quà và **hạn dùng quà** ghi rõ con số, không ghi chung chung.\n- Ghi rõ có được **cộng chung khuyến mãi** khác hay không.\n- Tiệm có cách ghi lại dấu của khách (sổ, ảnh chụp thẻ) để **khách mất thẻ** vẫn tra được.\n\nMẹo nhỏ: có thể tặng sẵn 1 dấu ngay lần đầu để khách thấy mình đã bắt đầu tích."
+  },
+  {
     "slug": "mo-ta-san-pham-shop-online-bang-ai",
     "tieu_de": "Nhờ AI viết mô tả 1 món hàng cho shop online từ thông tin thật",
     "tom_tat": "Khách mua online chỉ dựa vào chữ và ảnh. Đưa cho ChatGPT đúng thông tin thật của món hàng, nhờ viết mô tả ngắn, rõ, rồi tự soát lại trước khi đăng.",
