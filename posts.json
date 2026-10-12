@@ -1,5 +1,15 @@
 [
   {
+    "slug": "quy-dinh-chia-tien-tho-bang-ai",
+    "tieu_de": "Nhờ AI viết rõ quy định chia tiền cho thợ của tiệm",
+    "tom_tat": "Chia tiền thợ nói miệng dễ hiểu lầm cuối tháng. Nhờ ChatGPT viết lại cách tiệm đang chia thành 1 trang rõ ràng, có ví dụ tính sẵn, để chủ và thợ cùng đọc.",
+    "chu_de": "Quản lý tiệm",
+    "ngay": "2026-10-13",
+    "phut": 3,
+    "viec": "Hôm nay nhờ AI viết cách tiệm chia tiền cho thợ thành 1 trang, tự soát ví dụ rồi gửi thợ đọc.",
+    "noi_dung": "Tiệm nhỏ hay thỏa thuận chia tiền với thợ **bằng miệng**, đến cuối tháng mới vỡ lẽ mỗi người hiểu một kiểu. Viết ra 1 trang rõ ràng giúp cả hai bên yên tâm.\n\n## Câu lệnh chép dùng ngay\n\n> Viết lại quy định chia tiền cho thợ của tiệm [loại tiệm: nail, spa, tóc...] thành 1 trang dưới 200 chữ, câu ngắn, không dùng từ tiếng Anh. Chỉ dùng đúng thông tin tôi đưa, không tự thêm tỷ lệ hay khoản thưởng, thiếu gì thì ghi [CẦN ĐIỀN]. Ghi rõ: thợ có lương cứng không, được bao nhiêu phần trăm, tính trên giá niêm yết hay trên số tiền khách thật sự trả sau giảm giá, tiền tip của ai, ngày nào trả. Cuối trang thêm 1 ví dụ tính tiền cho 1 ngày làm việc. Thông tin của tiệm: [điền cách tiệm đang chia].\n\n## Làm theo 3 bước\n\n- Ghi đúng **cách tiệm đang chia** vào cuối câu lệnh, kể cả lương cứng, phần trăm, tip.\n- Dán vào ChatGPT, đọc lại; câu nào **không đúng thỏa thuận** thì sửa hoặc xóa.\n- Gửi thợ đọc trước, cả hai đồng ý rồi mới in hoặc lưu lại.\n\n## Trước khi dùng, soát 3 điều\n\n- **Tự bấm máy tính lại ví dụ** ở cuối trang, vì AI có thể tính sai.\n- Ghi rõ phần trăm tính trên **giá niêm yết hay tiền khách trả thật** khi có giảm giá.\n- Nếu có mức thưởng theo doanh số, ghi rõ phần trăm cao hơn áp cho **cả tháng hay chỉ phần vượt**.\n\nMẹo nhỏ: khi đổi cách chia, sửa trang này và ghi ngày áp dụng ở đầu trang."
+  },
+  {
     "slug": "the-tich-diem-khach-quen-bang-ai",
     "tieu_de": "Nhờ AI soạn thể lệ thẻ tích điểm cho khách quen của tiệm",
     "tom_tat": "Thẻ tích điểm đơn giản như 'làm đủ 5 lần tặng 1 lần' giúp khách có lý do quay lại. Nhờ ChatGPT soạn thể lệ ngắn, rõ, rồi in hoặc gửi khách qua Zalo.",
