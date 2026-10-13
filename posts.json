@@ -1,5 +1,15 @@
 [
   {
+    "slug": "phieu-qua-tang-20-10-bang-ai",
+    "tieu_de": "Nhờ AI soạn chữ cho phiếu quà tặng 20/10 của tiệm",
+    "tom_tat": "Dịp 20/10 nhiều người muốn mua quà là một buổi làm đẹp cho mẹ, vợ, bạn gái. Nhờ ChatGPT soạn chữ cho phiếu quà tặng thật rõ ràng để in hoặc gửi ảnh qua Zalo.",
+    "chu_de": "Bán hàng",
+    "ngay": "2026-10-14",
+    "phut": 3,
+    "viec": "Hôm nay nhờ AI soạn chữ cho 1 mẫu phiếu quà tặng 20/10, tự soát hạn dùng và mã phiếu rồi in thử.",
+    "noi_dung": "Phiếu quà tặng giúp người mua tặng **một buổi làm đẹp** thay vì món đồ. Chữ trên phiếu phải rõ để người nhận đến tiệm không phải hỏi lại.\n\n## Câu lệnh chép dùng ngay\n\n> Soạn chữ cho phiếu quà tặng dịp 20/10 của tiệm [loại tiệm: spa, nail, tóc...] tên [tên tiệm], dài dưới 80 chữ, câu ngắn, không dùng từ tiếng Anh. Chỉ dùng đúng thông tin tôi đưa, không tự thêm ưu đãi hay hứa hẹn khác, thiếu gì thì ghi [CẦN ĐIỀN]. Gồm: 1 câu chúc ngắn, tên dịch vụ hoặc số tiền của phiếu, hạn dùng, cách đặt lịch, phiếu có đổi ra tiền được không, có cộng chung khuyến mãi khác không, và chỗ trống ghi mã phiếu. Thông tin: [dịch vụ hoặc số tiền, hạn dùng, số điện thoại hoặc Zalo đặt lịch].\n\n## Làm theo 3 bước\n\n- Điền **dịch vụ, hạn dùng, số Zalo** vào cuối câu lệnh rồi dán vào ChatGPT.\n- Đọc lại, sửa câu nào **không đúng cách tiệm làm**, rồi chép chữ vào mẫu phiếu trên Canva hoặc Word.\n- In thử 1 tờ hoặc lưu ảnh để gửi khách mua qua Zalo.\n\n## Trước khi dùng, soát 3 điều\n\n- **Hạn dùng** ghi rõ ngày, đừng đặt quá ngắn để người nhận kịp đến.\n- Mỗi phiếu có **một mã riêng** và tiệm ghi lại vào sổ, gạch đi khi khách đã dùng.\n- Ghi rõ phiếu **có đổi ra tiền** hay không để tránh hiểu lầm.\n\nMẹo nhỏ: chụp ảnh mỗi phiếu đã bán trước khi giao, để tra lại khi khách làm mất."
+  },
+  {
     "slug": "quy-dinh-chia-tien-tho-bang-ai",
     "tieu_de": "Nhờ AI viết rõ quy định chia tiền cho thợ của tiệm",
     "tom_tat": "Chia tiền thợ nói miệng dễ hiểu lầm cuối tháng. Nhờ ChatGPT viết lại cách tiệm đang chia thành 1 trang rõ ràng, có ví dụ tính sẵn, để chủ và thợ cùng đọc.",
