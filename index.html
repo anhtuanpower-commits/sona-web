@@ -44,7 +44,15 @@ header{position:sticky;top:0;z-index:20;background:#07070ad9;backdrop-filter:blu
 .slider{position:relative;max-width:520px;margin:20px auto 44px}
 .grid{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;overscroll-behavior-x:contain;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .grid::-webkit-scrollbar{display:none}
-.grid>.card,.grid>.empty{flex:0 0 100%;scroll-snap-align:center;scroll-snap-stop:always}
+.grid>.card,.grid>.empty{flex:0 0 100%;scroll-snap-align:start;scroll-snap-stop:always}
+.grid.multi>.card{flex-basis:86%}
+.grid.nudge>.card{animation:nudge 1.6s ease-in-out 2}
+@keyframes nudge{0%,40%,100%{transform:translateX(0)}15%{transform:translateX(-34px)}28%{transform:translateX(-6px)}}
+.hint{position:absolute;right:10px;top:22%;z-index:3;display:flex;align-items:center;gap:6px;padding:9px 12px 9px 14px;border-radius:999px;background:linear-gradient(180deg,var(--a2),var(--a));color:var(--ink);font-size:13px;font-weight:700;box-shadow:0 6px 24px #000a;border:0;cursor:pointer;animation:blink 1.2s ease-in-out infinite}
+.hint svg{width:16px;height:16px;animation:slide 1.2s ease-in-out infinite}
+.hint[hidden],.arr[hidden]{display:none}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.55}}
+@keyframes slide{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
 .grid>.card:hover{transform:none}
 .dots{display:flex;justify-content:center;gap:4px;margin-top:12px}
 .dots button{width:24px;height:24px;border:0;background:none;padding:0;cursor:pointer;display:grid;place-items:center}
@@ -55,7 +63,7 @@ header{position:sticky;top:0;z-index:20;background:#07070ad9;backdrop-filter:blu
 .arr svg{width:18px;height:18px}.arr.prev svg{transform:rotate(180deg)}
 .arr.prev{left:-64px}.arr.next{right:-64px}
 @media(min-width:680px){.arr{display:grid}}
-@media(prefers-reduced-motion:reduce){.grid{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){.grid{scroll-behavior:auto}.grid.nudge>.card,.hint,.hint svg{animation:none}}
 .card{background:var(--s);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,border-color .15s}
 .card:hover{transform:translateY(-2px);border-color:#f0b45888}
 .thumb{height:118px;position:relative;display:grid;place-items:center;background:linear-gradient(135deg,#2a1f10,#141014 60%,#1d160c);overflow:hidden}
@@ -232,7 +240,7 @@ function home(){document.title=(SITE.ten_web||"SONA")+(SITE.khau_hieu?" · "+SIT
   const kh=esc(SITE.khau_hieu||"Công cụ AI đơn giản cho người kinh doanh bận rộn").replace(/\bAI\b/,"<span>AI</span>");
   $("#app").innerHTML=`<section class="hero"><span class="eyebrow">${esc(SITE.slogan||"Công nghệ tiện ích cho mọi người")}</span><h1>${kh}</h1>
     <div class="search" id="sbox">${ICON.search}<input id="q" type="search" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="Anh chị đang cần gì?" aria-label="Tìm sản phẩm"><button class="clr" id="clr" aria-label="Xóa tìm kiếm">×</button></div></section>
-    <nav class="cats" id="cats" aria-label="Loại sản phẩm"></nav><p class="grid-h" id="gridH"></p><div class="slider"><button class="arr prev" id="prev" aria-label="Sản phẩm trước">${ICON.arrow}</button><div class="grid" id="grid" aria-roledescription="carousel"></div><button class="arr next" id="next" aria-label="Sản phẩm sau">${ICON.arrow}</button><div class="dots" id="dots"></div></div>`;
+    <nav class="cats" id="cats" aria-label="Loại sản phẩm"></nav><p class="grid-h" id="gridH"></p><div class="slider"><button class="arr prev" id="prev" aria-label="Sản phẩm trước">${ICON.arrow}</button><div class="grid" id="grid" aria-roledescription="carousel"></div><button class="hint" id="hint" hidden>Xem thêm ${ICON.arrow}</button><button class="arr next" id="next" aria-label="Sản phẩm sau">${ICON.arrow}</button><div class="dots" id="dots"></div></div>`;
   const q=$("#q");q.value=Q;$("#sbox").classList.toggle("has",!!Q);
   q.oninput=()=>{Q=q.value;$("#sbox").classList.toggle("has",!!Q);renderGrid()};
   q.onchange=()=>{if(q.value.trim())noteWords(q.value)};
@@ -253,14 +261,19 @@ function renderGrid(){
     :`<div class="empty"><b>${words.length?"Chưa có sản phẩm phù hợp":CAT?CAT+" sắp ra mắt":"Sản phẩm đầu tiên sắp ra mắt"}</b>${words.length?"Anh chị thử từ khóa khác.":"SONA đang hoàn thiện, anh chị quay lại sau ít ngày nhé."}</div>`;
   slider(list.length)}
 /* ---------- lướt ngang từng sản phẩm ---------- */
-function slider(n){const g=$("#grid"),d=$("#dots"),pv=$("#prev"),nx=$("#next");g.scrollLeft=0;
+function slider(n){const g=$("#grid"),d=$("#dots"),pv=$("#prev"),nx=$("#next"),ht=$("#hint");g.scrollLeft=0;
+  g.classList.toggle("multi",n>1);g.classList.remove("nudge");ht.hidden=n<2;
+  const step=()=>{const c=g.firstElementChild;return c?c.offsetWidth+16:1};
+  let touched=false;const stopHint=()=>{if(touched)return;touched=true;ht.hidden=true;g.classList.remove("nudge")};
+  ["pointerdown","touchstart","wheel"].forEach(ev=>g.addEventListener(ev,stopHint,{once:true,passive:true}));
+  clearTimeout(slider.t);if(n>1)slider.t=setTimeout(()=>{if(!touched)g.classList.add("nudge")},900);
   d.innerHTML=n>1?Array.from({length:n},(_,i)=>`<button aria-label="Sản phẩm ${i+1}"></button>`).join(""):"";
   pv.hidden=nx.hidden=n<2;
-  const idx=()=>Math.round(g.scrollLeft/(g.clientWidth+16));
-  const go=i=>g.scrollTo({left:Math.max(0,Math.min(n-1,i))*(g.clientWidth+16)});
-  const sync=()=>{const i=idx();[...d.children].forEach((b,k)=>b.classList.toggle("on",k===i));pv.disabled=i<=0;nx.disabled=i>=n-1};
+  const idx=()=>Math.round(g.scrollLeft/step());
+  const go=i=>{stopHint();g.scrollTo({left:Math.max(0,Math.min(n-1,i))*step()})};
+  const sync=()=>{const i=idx();if(i>0)stopHint();[...d.children].forEach((b,k)=>b.classList.toggle("on",k===i));pv.disabled=i<=0;nx.disabled=i>=n-1};
   [...d.children].forEach((b,k)=>b.onclick=()=>go(k));
-  pv.onclick=()=>go(idx()-1);nx.onclick=()=>go(idx()+1);
+  pv.onclick=()=>go(idx()-1);nx.onclick=ht.onclick=()=>go(idx()+1);
   g.onscroll=()=>{cancelAnimationFrame(slider.f);slider.f=requestAnimationFrame(sync)};
   g.onkeydown=e=>{if(e.key==="ArrowRight"){e.preventDefault();go(idx()+1)}if(e.key==="ArrowLeft"){e.preventDefault();go(idx()-1)}};
   sync()}
