@@ -43,7 +43,9 @@
         "hoi": "Có phải trả phí hàng tháng không?",
         "dap": "Không. Trả một lần 390.000đ, dùng lâu dài."
       }
-    ]
+    ],
+    "loai_hien_thi": "App điện thoại",
+    "mo_ta_ngan": "36 bài đăng sẵn cho 12 tuần, mở ra là đăng."
   },
   {
     "slug": "chatgpt-cho-chu-spa-viet-bai-dang-tra-loi-inbox",
@@ -91,6 +93,34 @@
     "font": "Quicksand",
     "nut": "Mua Ngay",
     "cam_ket": "Sau khi mua, được hỗ trợ qua Zalo trong 7 ngày để hỏi thêm nếu chưa rõ cách dùng.",
-    "anh_bia": "img/covers/chatgpt-cho-chu-spa-viet-bai-dang-tra-loi-inbox.jpg"
+    "anh_bia": "img/covers/chatgpt-cho-chu-spa-viet-bai-dang-tra-loi-inbox.jpg",
+    "loai_hien_thi": "Tài liệu PDF",
+    "mo_ta_ngan": "Cẩm nang cầm tay viết bài, tư vấn và trả lời khách hàng."
+  },
+  {
+    "slug": "ung-dung-ai-trong-kinh-doanh-spa",
+    "ma": "SP03",
+    "loai": "Khóa học",
+    "loai_hien_thi": "Khóa học online",
+    "sap_ra_mat": true,
+    "ten": "Ứng dụng AI Trong Kinh Doanh Spa",
+    "mo_ta_ngan": "Bài học ngắn, dễ hiểu, làm được ngay.",
+    "phu_de": "Khóa học online gồm các bài học ngắn, hướng dẫn chủ spa dùng AI vào việc hằng ngày: viết bài, chăm khách, quản lý tiệm.",
+    "cho_ai": "Chủ spa, salon muốn tự dùng AI mà không cần biết công nghệ.",
+    "loi_ich": [
+      "Bài học ngắn, mỗi bài làm được ngay một việc",
+      "Ví dụ thực tế cho spa và salon",
+      "Hỗ trợ hỏi đáp qua Zalo"
+    ],
+    "goi": [
+      {
+        "ten": "Khóa học online",
+        "gia": "299.000đ",
+        "mo_ta": "Giá dự kiến, sẽ cập nhật khi mở bán",
+        "so_tien": 299000
+      }
+    ],
+    "cach_nhan": "Khóa học đang được hoàn thiện. Anh chị nhắn Zalo SONA để được báo khi mở bán.",
+    "cau_hoi": []
   }
 ]
