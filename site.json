@@ -1,5 +1,5 @@
 {
-  "ten_web": "SONA AI",
+  "ten_web": "SONA",
   "khau_hieu": "Công cụ AI đơn giản cho người kinh doanh bận rộn",
   "zalo": "0965292875",
   "email": "",
@@ -17,17 +17,5 @@
     "facebook": "https://www.facebook.com/share/19YuZQ7PJ4/",
     "tiktok": "https://www.tiktok.com/@sonaai.vn",
     "youtube": "https://www.youtube.com/@sonaai-vn"
-  },
-  "trang_chu": {
-    "ghi_chu": "noi_bat: slug sản phẩm hiện ở trang chủ. chi_so và danh_gia chỉ điền số liệu, đánh giá THẬT. hien_mau=true thì hiện ô mẫu có ghi chú khi chưa có dữ liệu; đổi thành false để ẩn hẳn.",
-    "noi_bat": [
-      "sheet-lich-dang-spa",
-      "chatgpt-cho-chu-spa-viet-bai-dang-tra-loi-inbox",
-      "ung-dung-ai-trong-kinh-doanh-spa"
-    ],
-    "video": "",
-    "chi_so": [],
-    "danh_gia": [],
-    "hien_mau": true
   }
 }
