@@ -1,5 +1,15 @@
 [
   {
+    "slug": "tin-nhac-khach-con-buoi-lieu-trinh-bang-ai",
+    "tieu_de": "Nhờ AI soạn tin nhắc khách còn buổi trong gói liệu trình",
+    "tom_tat": "Khách mua gói nhiều buổi rồi quên đến, đến lúc hết hạn lại không vui. Nhờ ChatGPT soạn sẵn tin Zalo nhắc khách còn mấy buổi và hạn dùng, lời lẽ nhẹ nhàng.",
+    "chu_de": "Chăm khách",
+    "ngay": "2026-10-15",
+    "phut": 3,
+    "viec": "Hôm nay lọc khách còn 2 buổi trở xuống hoặc gói sắp hết hạn, nhờ AI soạn tin nhắc và gửi cho 1 khách.",
+    "noi_dung": "Khách đã trả trước cho gói nhiều buổi mà quên đến thì dễ mất lòng khi gói hết hạn. Một tin nhắc đúng lúc giúp khách **đặt lại lịch** và nhớ tới tiệm.\n\n## Câu lệnh chép dùng ngay\n\n> Soạn tin nhắn Zalo nhắc khách dùng tiếp gói liệu trình ở tiệm [loại tiệm] tên [tên tiệm], dài dưới 60 chữ, giọng thân thiện, không dùng từ tiếng Anh, không thúc ép. Chỉ dùng đúng thông tin tôi đưa, không tự thêm ưu đãi hay hứa hẹn, thiếu gì thì ghi [CẦN ĐIỀN]. Gồm: lời chào có tên khách, tên gói, số buổi còn lại, ngày hết hạn, mời khách chọn giờ, số Zalo đặt lịch. Thông tin: [tên khách, tên gói, số buổi còn, ngày hết hạn, số Zalo].\n\n## Làm theo 3 bước\n\n- Mở sổ khách, tìm người **còn 2 buổi trở xuống** hoặc gói **còn khoảng 1 tháng** là hết hạn.\n- Điền thông tin từng khách vào cuối câu lệnh, dán vào ChatGPT, đọc lại rồi sửa câu chưa đúng ý.\n- Gửi qua Zalo và ghi vào sổ **ngày đã nhắc** để không nhắc trùng.\n\n## Trước khi gửi, soát 3 điều\n\n- **Số buổi còn lại** và **ngày hết hạn** phải khớp với sổ của tiệm.\n- Mỗi khách chỉ nhắc 1 lần cho mỗi mốc, đừng nhắn dồn dập.\n- Nếu tiệm có cho gia hạn, chỉ ghi khi **chủ tiệm đã đồng ý**, đừng để AI tự hứa.\n\nMẹo nhỏ: lưu câu lệnh vào ghi chú điện thoại, lần sau chỉ thay tên khách và số buổi."
+  },
+  {
     "slug": "phieu-qua-tang-20-10-bang-ai",
     "tieu_de": "Nhờ AI soạn chữ cho phiếu quà tặng 20/10 của tiệm",
     "tom_tat": "Dịp 20/10 nhiều người muốn mua quà là một buổi làm đẹp cho mẹ, vợ, bạn gái. Nhờ ChatGPT soạn chữ cho phiếu quà tặng thật rõ ràng để in hoặc gửi ảnh qua Zalo.",
