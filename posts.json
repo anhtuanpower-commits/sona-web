@@ -1,5 +1,15 @@
 [
   {
+    "slug": "hoi-lich-ban-cua-tho-truoc-khi-xep-ca-bang-ai",
+    "tieu_de": "Nhờ AI soạn tin hỏi lịch bận của thợ trước khi xếp ca",
+    "tom_tat": "Xếp ca rồi mới biết thợ bận thì phải làm lại. Nhờ ChatGPT soạn một tin Zalo gọn gửi nhóm thợ, hỏi ngày bận và ngày xin nghỉ của tuần sau.",
+    "chu_de": "Quản lý tiệm",
+    "ngay": "2026-10-16",
+    "phut": 3,
+    "viec": "Hôm nay nhờ AI soạn tin hỏi lịch bận tuần sau và gửi vào nhóm Zalo của thợ.",
+    "noi_dung": "Xếp ca xong mới biết thợ bận thì phải xếp lại từ đầu. Hỏi lịch bận **trước khi xếp** và gửi lịch **sớm 1 tuần** giúp cả tiệm đỡ đổi ca vào phút chót.\n\n## Câu lệnh chép dùng ngay\n\n> Soạn tin nhắn Zalo gửi nhóm thợ của tiệm [loại tiệm] tên [tên tiệm], dài dưới 70 chữ, giọng thân thiện, không dùng từ tiếng Anh. Nội dung: nhờ mọi người báo ngày hoặc buổi bận và ngày muốn xin nghỉ của tuần từ [ngày bắt đầu] đến [ngày kết thúc], hạn báo trước [giờ, ngày], ghi mẫu trả lời ngắn để ai cũng làm theo được. Chỉ dùng đúng thông tin tôi đưa, không tự thêm thưởng hay hứa hẹn, thiếu gì thì ghi [CẦN ĐIỀN].\n\n## Làm theo 3 bước\n\n- Điền ngày của tuần sau và hạn báo vào câu lệnh, dán vào ChatGPT, đọc lại rồi sửa câu chưa đúng ý.\n- Gửi vào nhóm Zalo của thợ, ví dụ gửi **thứ Hai** và hạn báo **tối thứ Tư**.\n- Khi đủ câu trả lời mới xếp ca, rồi gửi lịch cho cả nhóm **trước ít nhất 1 tuần**.\n\n## Khi xếp ca, soát 3 điều\n\n- Mỗi thợ có **ít nhất 1 ngày nghỉ** trong tuần.\n- Không xếp ai trùng ca hoặc trùng ngày đã báo bận.\n- Chụp lại lịch đã gửi và giữ trong máy, sau này có hỏi lại về ngày công thì có cái để xem.\n\nMẹo nhỏ: lưu câu lệnh vào ghi chú điện thoại, tuần sau chỉ thay ngày."
+  },
+  {
     "slug": "tin-nhac-khach-con-buoi-lieu-trinh-bang-ai",
     "tieu_de": "Nhờ AI soạn tin nhắc khách còn buổi trong gói liệu trình",
     "tom_tat": "Khách mua gói nhiều buổi rồi quên đến, đến lúc hết hạn lại không vui. Nhờ ChatGPT soạn sẵn tin Zalo nhắc khách còn mấy buổi và hạn dùng, lời lẽ nhẹ nhàng.",
