@@ -1,5 +1,15 @@
 [
   {
+    "slug": "nhac-khach-tra-no-lich-su-bang-ai",
+    "tieu_de": "Nhờ AI soạn tin nhắc khách trả nợ mà vẫn giữ được khách",
+    "tom_tat": "Ngại nhắc thì mất tiền, nhắc gắt thì mất khách. Nhờ ChatGPT soạn một tin Zalo lịch sự, ghi đúng số tiền và cách chuyển khoản.",
+    "chu_de": "Bán hàng",
+    "ngay": "2026-10-17",
+    "phut": 3,
+    "viec": "Hôm nay chọn một khách đang nợ, nhờ AI soạn tin nhắc lịch sự, kiểm lại số tiền rồi gửi qua Zalo.",
+    "noi_dung": "Nhiều chủ tiệm ngại nhắc nợ nên cứ để mãi, đến khi nhắc thì lời lẽ lại gắt. Một tin **lịch sự, đúng số tiền, có sẵn cách trả** giúp khách trả nhanh mà vẫn quay lại.\n\n## Câu lệnh chép dùng ngay\n\n> Soạn tin nhắn Zalo gửi khách [tên khách] của tiệm [tên tiệm], dài dưới 60 chữ, giọng nhẹ nhàng, lịch sự, không trách móc, không dọa. Nội dung: nhắc khoản còn nợ [số tiền] đồng của [món hàng hoặc dịch vụ] ngày [ngày mua], mong khách thanh toán trước [hạn trả], chuyển khoản vào [ngân hàng, số tài khoản, tên chủ tài khoản], nội dung ghi [tên khách + số điện thoại]. Cuối tin cảm ơn khách đã ủng hộ. Chỉ dùng đúng thông tin tôi đưa, thiếu gì thì ghi [CẦN ĐIỀN].\n\n## Làm theo 3 bước\n\n- Mở sổ nợ, xem lại **đúng số tiền và ngày mua** trước khi điền vào câu lệnh.\n- Dán vào ChatGPT, đọc lại tin: sửa câu nào nghe như trách khách, xóa hết chỗ còn [CẦN ĐIỀN].\n- Gửi riêng cho khách qua Zalo, **không** nhắc trong nhóm đông người.\n\n## Giữ cho êm\n\n- Nếu khách xin thêm thời gian, hỏi một ngày cụ thể và ghi vào sổ.\n- Khi khách trả xong, nhắn **cảm ơn và xác nhận đã nhận đủ** để hai bên cùng yên tâm.\n- Không đăng tên hay ảnh khách nợ lên mạng, dễ mất khách và rắc rối.\n\nMẹo nhỏ: lưu câu lệnh vào ghi chú điện thoại, lần sau chỉ thay tên và số tiền."
+  },
+  {
     "slug": "hoi-lich-ban-cua-tho-truoc-khi-xep-ca-bang-ai",
     "tieu_de": "Nhờ AI soạn tin hỏi lịch bận của thợ trước khi xếp ca",
     "tom_tat": "Xếp ca rồi mới biết thợ bận thì phải làm lại. Nhờ ChatGPT soạn một tin Zalo gọn gửi nhóm thợ, hỏi ngày bận và ngày xin nghỉ của tuần sau.",
