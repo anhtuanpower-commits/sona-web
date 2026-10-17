@@ -1,5 +1,15 @@
 [
   {
+    "slug": "noi-quy-chia-luot-khach-cho-tho-bang-ai",
+    "tieu_de": "Nhờ AI viết nội quy chia lượt khách cho thợ, dán ở quầy",
+    "tom_tat": "Tiệm đông thợ hay cãi nhau vì ai được nhận khách. Nhờ ChatGPT viết một bảng nội quy chia lượt ngắn, rõ ràng để cả tiệm cùng làm theo.",
+    "chu_de": "Quản lý tiệm",
+    "ngay": "2026-10-18",
+    "phut": 3,
+    "viec": "Hôm nay nhờ AI viết nội quy chia lượt khách, đọc cho thợ nghe rồi in dán ở quầy.",
+    "noi_dung": "Khi khách vào mà không hẹn trước, thợ dễ giận nhau vì nghĩ người khác được nhiều khách hơn. Một **nội quy chia lượt viết rõ** giúp ai cũng biết mình là người kế tiếp.\n\n## Câu lệnh chép dùng ngay\n\n> Viết nội quy chia lượt khách vãng lai cho tiệm [loại tiệm] tên [tên tiệm] có [số] thợ, tối đa 8 dòng, câu ngắn, dễ hiểu, không dùng từ tiếng Anh. Luật của tiệm: thợ vào ca trước nhận khách trước; [các dịch vụ tính nửa lượt] tính nửa lượt, các dịch vụ khác tính một lượt; ai ít lượt nhất trong ngày thì nhận khách tiếp theo; khách chỉ định thợ thì [cách tính của tiệm]. Chỉ dùng đúng luật tôi đưa, chỗ nào chưa rõ thì ghi [CẦN ĐIỀN].\n\n## Làm theo 3 bước\n\n- Điền luật thật của tiệm vào câu lệnh, dán vào ChatGPT, đọc lại và sửa chỗ chưa đúng.\n- Đọc cho cả tiệm nghe, hỏi thợ có thấy chỗ nào chưa công bằng, sửa xong **mới in**.\n- In khổ giấy A5, dán ở quầy và gửi vào nhóm Zalo của thợ.\n\n## Giữ cho công bằng\n\n- Dùng một tờ giấy hoặc bảng ở quầy, **ghi lượt ngay khi giao khách**, không để cuối ngày mới nhớ.\n- Khách chỉ định thợ thì làm đúng như nội quy đã ghi, không đổi tùy lúc.\n- Mỗi tháng hỏi lại thợ một lần, có gì vướng thì sửa nội quy.\n\nMẹo nhỏ: lưu câu lệnh vào ghi chú điện thoại, khi đổi luật chỉ cần sửa rồi dán lại."
+  },
+  {
     "slug": "nhac-khach-tra-no-lich-su-bang-ai",
     "tieu_de": "Nhờ AI soạn tin nhắc khách trả nợ mà vẫn giữ được khách",
     "tom_tat": "Ngại nhắc thì mất tiền, nhắc gắt thì mất khách. Nhờ ChatGPT soạn một tin Zalo lịch sự, ghi đúng số tiền và cách chuyển khoản.",
