@@ -1,5 +1,15 @@
 [
   {
+    "slug": "tin-xac-nhan-don-truoc-khi-giao-bang-ai",
+    "tieu_de": "Nhờ AI soạn tin xác nhận đơn trước khi gửi hàng",
+    "tom_tat": "Đơn thu tiền khi giao mà khách không nhận là shop mất tiền ship hai chiều. Nhờ ChatGPT soạn sẵn một tin xác nhận đơn ngắn để gửi Zalo trước khi đóng gói.",
+    "chu_de": "Bán hàng",
+    "ngay": "2026-10-21",
+    "phut": 3,
+    "viec": "Hôm nay nhờ AI soạn một tin xác nhận đơn, gửi Zalo cho khách trước khi đóng gói.",
+    "noi_dung": "Khách đặt vội rồi quên, hoặc ghi sai địa chỉ, là đơn dễ bị trả về. Một **tin xác nhận gửi trước khi đóng gói** giúp shop biết khách còn muốn nhận không.\n\n## Câu lệnh chép dùng ngay\n\n> Viết một tin nhắn Zalo xác nhận đơn hàng cho shop [tên shop] bán [loại hàng]. Tin tối đa 6 dòng, gọi khách là [anh/chị], có chỗ [TÊN KHÁCH], [MÓN HÀNG], [TỔNG TIỀN], [ĐỊA CHỈ], [NGÀY GIAO DỰ KIẾN]. Cuối tin mời khách trả lời số 1 để xác nhận, hoặc nhắn lại nếu cần sửa địa chỉ. Giọng thân thiện, không dùng từ tiếng Anh, không hứa quà hay giảm giá.\n\n## Làm theo 3 bước\n\n- Điền tên shop và loại hàng vào câu lệnh, dán vào ChatGPT, đọc lại và sửa cho giống cách shop hay nói.\n- Lưu mẫu tin vào ghi chú điện thoại.\n- Có đơn mới thì chép mẫu, **điền đúng món, tiền, địa chỉ** rồi gửi Zalo ngay cho khách.\n\n## Lưu ý\n\n- Chỉ đóng gói đơn khách **đã trả lời xác nhận**. Đơn chưa trả lời thì gọi một cuộc ngắn trước khi gửi.\n- Đơn giá trị cao hoặc khách lạ có thể xin cọc trước tiền ship, nói rõ lý do một cách lịch sự.\n- Khách sửa địa chỉ thì **sửa ngay trên phiếu gửi hàng**, rồi nhắn lại cho khách xem.\n\nMẹo nhỏ: ghi chú cạnh mỗi đơn là đã xác nhận, đang chờ hay đã hủy để không gửi nhầm."
+  },
+  {
     "slug": "tin-nhac-lich-hen-ngay-mai-bang-ai",
     "tieu_de": "Nhờ AI soạn tin nhắc khách lịch hẹn ngày mai",
     "tom_tat": "Khách quên lịch là tiệm mất giờ trống. Nhờ ChatGPT soạn sẵn một tin nhắc ngắn, lịch sự, tối nào cũng chỉ việc đổi tên và giờ rồi gửi Zalo.",
