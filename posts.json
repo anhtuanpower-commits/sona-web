@@ -1,5 +1,15 @@
 [
   {
+    "slug": "tin-nhac-lich-hen-ngay-mai-bang-ai",
+    "tieu_de": "Nhờ AI soạn tin nhắc khách lịch hẹn ngày mai",
+    "tom_tat": "Khách quên lịch là tiệm mất giờ trống. Nhờ ChatGPT soạn sẵn một tin nhắc ngắn, lịch sự, tối nào cũng chỉ việc đổi tên và giờ rồi gửi Zalo.",
+    "chu_de": "Chăm khách",
+    "ngay": "2026-10-20",
+    "phut": 3,
+    "viec": "Tối nay nhờ AI soạn một tin nhắc lịch hẹn, rồi gửi Zalo cho từng khách có lịch ngày mai.",
+    "noi_dung": "Khách bận rộn dễ quên lịch đã hẹn. Một **tin nhắc ngắn gửi tối hôm trước** giúp khách nhớ, và nếu bận thì khách báo sớm để tiệm xếp người khác.\n\n## Câu lệnh chép dùng ngay\n\n> Viết 2 mẫu tin nhắn Zalo nhắc khách lịch hẹn ngày mai cho tiệm [loại tiệm] tên [tên tiệm], địa chỉ [địa chỉ]. Mẫu 1 cho dịch vụ thường, mẫu 2 cho dịch vụ cần chuẩn bị trước ([dịch vụ], dặn khách: [lời dặn]). Mỗi mẫu tối đa 4 câu, xưng tiệm, gọi khách là [anh/chị], có chỗ [TÊN KHÁCH], [GIỜ], [DỊCH VỤ]. Cuối tin mời khách trả lời số 1 để giữ lịch, hoặc nhắn sớm nếu cần đổi giờ. Giọng thân thiện, không dùng từ tiếng Anh, không hứa giảm giá.\n\n## Làm theo 3 bước\n\n- Điền thông tin tiệm vào câu lệnh, dán vào ChatGPT, đọc lại và sửa cho giống cách tiệm hay nói.\n- Lưu 2 mẫu vào ghi chú điện thoại.\n- Mỗi tối xem sổ lịch ngày mai, chép mẫu, **đổi tên, giờ, dịch vụ** rồi gửi Zalo cho từng khách.\n\n## Lưu ý\n\n- Zalo cá nhân **không tự gửi tin theo giờ** cho khách, nên đặt báo thức lúc 19 giờ để nhớ gửi.\n- Dịch vụ cần dặn trước (ví dụ nhuộm tóc) thì nên nhắc sớm hơn, khoảng 2 ngày.\n- Khách trả lời đổi giờ thì **ghi ngay vào sổ lịch**, rồi nhắn lại giờ mới cho khách.\n\nMẹo nhỏ: khách nào không trả lời, sáng hôm sau gọi một cuộc ngắn trước giờ hẹn."
+  },
+  {
     "slug": "noi-quy-chia-luot-khach-cho-tho-bang-ai",
     "tieu_de": "Nhờ AI viết nội quy chia lượt khách cho thợ, dán ở quầy",
     "tom_tat": "Tiệm đông thợ hay cãi nhau vì ai được nhận khách. Nhờ ChatGPT viết một bảng nội quy chia lượt ngắn, rõ ràng để cả tiệm cùng làm theo.",
