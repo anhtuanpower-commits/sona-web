@@ -1,5 +1,15 @@
 [
   {
+    "slug": "tin-xin-khach-danh-gia-google-bang-ai",
+    "tieu_de": "Nhờ AI soạn tin xin khách để lại đánh giá trên Google",
+    "tom_tat": "Khách hài lòng thường quên viết đánh giá. Nhờ ChatGPT soạn một tin cảm ơn ngắn kèm link đánh giá, gửi Zalo ngay sau khi khách về.",
+    "chu_de": "Chăm khách",
+    "ngay": "2026-10-22",
+    "phut": 3,
+    "viec": "Hôm nay nhờ AI soạn một tin cảm ơn kèm link đánh giá Google, gửi cho khách vừa làm xong.",
+    "noi_dung": "Khách vui thì ít khi tự nhớ viết đánh giá. Một **tin cảm ơn kèm link đánh giá** gửi ngay sau buổi làm giúp khách chỉ cần bấm là viết được.\n\n## Câu lệnh chép dùng ngay\n\n> Viết một tin nhắn Zalo cảm ơn khách vừa dùng dịch vụ tại tiệm [loại tiệm] tên [tên tiệm]. Tin tối đa 4 câu, gọi khách là [anh/chị], có chỗ [TÊN KHÁCH] và [LINK ĐÁNH GIÁ]. Mời khách nếu có thời gian thì viết vài dòng cảm nhận thật trên Google. Không hứa quà, không giảm giá, không bảo khách cho 5 sao hay nhắc tên thợ. Giọng thân thiện, không dùng từ tiếng Anh.\n\n## Làm theo 3 bước\n\n- Mở trang quản lý Google của tiệm (Google Business Profile), tìm mục xin đánh giá để **lấy link hoặc mã QR** của tiệm.\n- Dán câu lệnh vào ChatGPT, đọc lại, sửa cho giống cách tiệm hay nói rồi lưu vào ghi chú điện thoại.\n- Khách làm xong và vui vẻ ra về thì chép mẫu, điền tên khách và link, gửi Zalo.\n\n## Đúng luật Google\n\n- Google **cấm tặng quà hay giảm giá để đổi lấy đánh giá**. Chỉ cảm ơn và mời, không đổi chác.\n- Không giao chỉ tiêu số đánh giá cho thợ, không bảo khách khen tên một thợ cụ thể.\n- Khách nào chê thì cảm ơn và trả lời lịch sự, không xin khách sửa đánh giá.\n\nMẹo nhỏ: in mã QR đánh giá dán ở quầy thu ngân để khách quét luôn khi trả tiền."
+  },
+  {
     "slug": "tin-xac-nhan-don-truoc-khi-giao-bang-ai",
     "tieu_de": "Nhờ AI soạn tin xác nhận đơn trước khi gửi hàng",
     "tom_tat": "Đơn thu tiền khi giao mà khách không nhận là shop mất tiền ship hai chiều. Nhờ ChatGPT soạn sẵn một tin xác nhận đơn ngắn để gửi Zalo trước khi đóng gói.",
