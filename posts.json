@@ -1,5 +1,15 @@
 [
   {
+    "slug": "chinh-sach-doi-tra-shop-online-bang-ai",
+    "tieu_de": "Nhờ AI viết chính sách đổi trả ngắn gọn cho shop online",
+    "tom_tat": "Khách hay hỏi được đổi không, ai trả ship. Tự quyết điều khoản trước, rồi nhờ ChatGPT viết thành 6 dòng dễ hiểu để ghim lên trang và gửi Zalo.",
+    "chu_de": "Bán hàng",
+    "ngay": "2026-10-23",
+    "phut": 3,
+    "viec": "Hôm nay nhờ AI viết chính sách đổi trả 6 dòng, ghim lên trang Facebook của shop.",
+    "noi_dung": "Khách mua online hay hỏi đi hỏi lại: hàng lỗi có đổi không, đổi trong mấy ngày, ai trả tiền ship. Một **chính sách đổi trả ngắn, ghi số rõ ràng** giúp shop trả lời một lần cho tất cả.\n\n## Câu lệnh chép dùng ngay\n\n> Viết chính sách đổi trả cho shop [tên shop] bán [loại hàng], tối đa 6 dòng, mỗi dòng một ý, gọi khách là [anh/chị]. Điều khoản của shop: được đổi trong [số] ngày kể từ khi nhận hàng; hàng phải [còn tem, chưa dùng]; shop [đổi món khác / hoàn tiền]; hàng không đổi: [hàng giảm giá, hàng đặt riêng]; phí ship khi đổi: [shop trả nếu hàng lỗi, khách trả nếu đổi ý]; cách yêu cầu: nhắn Zalo [số Zalo] kèm ảnh hàng. Không thêm điều khoản nào khác, không dùng từ tiếng Anh.\n\n## Làm theo 3 bước\n\n- **Tự quyết điều khoản trước**: điền số ngày, hàng nào không đổi, ai trả ship vào câu lệnh. AI chỉ viết lại cho dễ hiểu, không quyết thay shop.\n- Dán vào ChatGPT, đọc lại từng dòng, xóa chỗ nào AI tự thêm mà shop không làm được.\n- Ghim bài lên trang Facebook, lưu làm tin trả lời nhanh trên Zalo, và dán vào cuối tin xác nhận đơn.\n\n## Lưu ý\n\n- Ghi **số cụ thể** như \"7 ngày kể từ khi nhận hàng\", tránh chữ chung chung như \"sớm\" hay \"tùy trường hợp\".\n- Nói rõ **ai trả tiền ship** khi đổi. Đây là điều khách hỏi nhiều nhất.\n- Đã ghi thì làm đúng như ghi. Muốn đổi điều khoản thì sửa bài ghim trước.\n\nMẹo nhỏ: khách nhắn hỏi đổi trả, chỉ cần gửi lại tin đã lưu rồi hỏi khách cần giúp gì thêm."
+  },
+  {
     "slug": "tin-xin-khach-danh-gia-google-bang-ai",
     "tieu_de": "Nhờ AI soạn tin xin khách để lại đánh giá trên Google",
     "tom_tat": "Khách hài lòng thường quên viết đánh giá. Nhờ ChatGPT soạn một tin cảm ơn ngắn kèm link đánh giá, gửi Zalo ngay sau khi khách về.",
