@@ -42,7 +42,13 @@ function clearSession() {
   try { [LS, OLD_KEY, PREVIEW_KEY].forEach(k => localStorage.removeItem(k)); } catch (e) { /* bỏ qua */ }
 }
 
+async function startDemo() {
+  G.setDemo(true); G.setToken(""); USER = { login: "dung-thu", name: "Khách dùng thử", role: "demo" };
+  $("#root").innerHTML = `<div class="boot">${loading("Đang mở bản dùng thử…")}</div>`;
+  await G.loadAll(); startApp();
+}
 async function boot() {
+  if (/[?&]dung-thu(=|&|$)/.test(location.search)) return startDemo(); // link xem thử không cần đăng nhập
   const t = readSession();
   if (!t) return loginView();
   G.setToken(t);
@@ -76,11 +82,7 @@ function loginView(msg = "") {
     try { USER = await G.whoAmI(); await G.loadAll(); saveSession(t, $("#f_rem").checked); startApp(); }
     catch (ex) { G.setToken(""); loginView(ex.message); }
   };
-  $("#demo").onclick = async () => {
-    G.setDemo(true); G.setToken(""); USER = { login: "dung-thu", name: "Khách dùng thử", role: "demo" };
-    $("#root").innerHTML = `<div class="boot">${loading("Đang mở bản dùng thử…")}</div>`;
-    await G.loadAll(); startApp();
-  };
+  $("#demo").onclick = startDemo;
   setTimeout(() => $("#tk")?.focus(), 50);
 }
 const tokenSteps = () => `<ol class="steps">
@@ -93,7 +95,9 @@ const tokenSteps = () => `<ol class="steps">
 
 async function logout() {
   if (DIRTY && !await confirmBox("Có thay đổi chưa lưu. Vẫn đăng xuất?", { yes: "Đăng xuất", danger: true })) return;
-  DIRTY = false; clearSession(); G.setToken(""); location.hash = ""; location.reload();
+  DIRTY = false; clearSession(); G.setToken("");
+  if (G.DEMO && /dung-thu/.test(location.search)) { location.href = location.pathname; return; }
+  location.hash = ""; location.reload();
 }
 
 /* ================= khung giao diện ================= */
