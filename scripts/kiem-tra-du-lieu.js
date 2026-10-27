@@ -2,9 +2,10 @@
 // Chạy: node scripts/kiem-tra-du-lieu.js  (thoát mã 1 nếu có lỗi phải sửa)
 import { readFileSync, existsSync, readdirSync, statSync } from "node:fs";
 import { join, relative } from "node:path";
+import { fileURLToPath } from "node:url";
 import { kiemTra } from "../admin/kiem-tra.js";
 
-const ROOT = new URL("..", import.meta.url).pathname;
+const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const data = {};
 let broken = false;
 for (const [k, f] of [["site", "site.json"], ["products", "products.json"], ["posts", "posts.json"], ["pages", "pages.json"]]) {
