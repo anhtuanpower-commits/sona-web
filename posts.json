@@ -1,5 +1,15 @@
 [
   {
+    "slug": "kich-ban-video-ngan-30-giay-bang-ai",
+    "tieu_de": "Nhờ AI viết kịch bản video 30 giây để tự quay ở tiệm",
+    "tom_tat": "Một câu lệnh chia video thành 4 cảnh, ghi rõ quay gì và chữ hiện gì, kèm dòng chú thích để đăng.",
+    "chu_de": "Viết nội dung",
+    "ngay": "2026-10-28",
+    "phut": 3,
+    "viec": "Hôm nay nhờ AI viết kịch bản video 30 giây cho 1 dịch vụ, rồi quay thử bằng điện thoại.",
+    "noi_dung": "Chép câu lệnh dưới đây vào ChatGPT, thay chữ trong ngoặc vuông bằng thông tin thật của tiệm.\n\n> Tôi làm [dịch vụ, ví dụ: sơn gel / gội đầu dưỡng sinh / chăm sóc da] ở tiệm [tên tiệm]. Hãy viết kịch bản video dọc 30 giây để tôi tự quay bằng điện thoại, chia 4 cảnh, mỗi cảnh ghi: quay cái gì, quay bao nhiêu giây, chữ hiện trên màn hình. Cảnh 1 có câu mở đầu gây tò mò. Chỉ dùng thông tin này: [giá, thời gian làm, điểm khác của tiệm]. Không tự thêm lời hứa kết quả. Viết thêm 1 dòng chú thích ngắn để đăng kèm video.\n\n## Vì sao làm thế này\nVideo quay cảnh thật của tiệm giúp khách thấy rõ mình sẽ được làm gì. Có kịch bản chia cảnh thì quay một lần là xong, không phải nghĩ tại chỗ.\n\n## Làm thế nào\n- Điền **thông tin thật** vào ngoặc vuông. AI chỉ sắp xếp lời, không tự nghĩ ra giá hay lời hứa.\n- Đọc lại kịch bản, xóa câu nào **nói quá** như \"đẹp ngay\", \"hết hẳn\".\n- Quay **từng cảnh một** theo đúng số giây, dựng điện thoại đứng dọc.\n- Muốn quay mặt khách thì **hỏi khách trước**.\n- Đăng video kèm dòng chú thích AI đã viết.\n\n## Gợi ý chọn dịch vụ để quay\n- Dịch vụ có **trước và sau** nhìn thấy rõ.\n- Cảnh **làm việc thường ngày** ở tiệm.\n- Một **mẹo chăm sóc** khách tự làm được ở nhà."
+  },
+  {
     "slug": "tin-dan-khach-cham-soc-sau-dich-vu-bang-ai",
     "tieu_de": "Nhờ AI viết tin Zalo dặn khách chăm sóc sau khi làm",
     "tom_tat": "Một câu lệnh biến lời thợ hay dặn thành tin Zalo ngắn, gửi ngay khi khách vừa ra về.",
