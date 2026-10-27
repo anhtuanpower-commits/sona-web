@@ -113,6 +113,8 @@ Gỡ quyền: bấm **Remove** ở cùng trang, người đó mất quyền sử
 
 Mọi lần lưu đều nằm trong lịch sử GitHub: https://github.com/nguyenanhtuansonnam-coder/sona-web/commits/main. Xem được ai sửa gì, lúc nào, và khôi phục bản cũ (nhờ người dựng web nếu chưa quen).
 
+Nếu hai người sửa cùng một bài, trang hoặc sản phẩm, Admin sẽ chặn bản lưu cũ để không ghi đè bản mới. Chép phần đang sửa sang chỗ tạm, tải lại trang để lấy bản mới nhất, rồi bổ sung nội dung và lưu lại.
+
 ## 14. Lỗi thường gặp
 
 | Hiện tượng | Cách xử lý |

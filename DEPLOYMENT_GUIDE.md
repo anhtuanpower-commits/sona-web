@@ -2,7 +2,8 @@
 
 ## Kiến trúc
 
-- Web tĩnh trên **GitHub Pages**, nhánh `main`, thư mục gốc. Không có máy chủ, không có database, không có bước build.
+- Kho hiện có cả **GitHub Pages** và tích hợp **Cloudflare Pages**. Các lần kiểm tra trên `main` ghi nhận cả hai; nhánh PR có bản xem trước Cloudflare. Không đổi hosting hoặc DNS khi cập nhật mã.
+- Web tĩnh, dữ liệu ở thư mục gốc nhánh `main`. Không có máy chủ ứng dụng hoặc database.
 - Dữ liệu: `site.json`, `products.json`, `posts.json`, `pages.json`, thư mục `img/`.
 - Admin: `admin/` (gọi GitHub API, xem `ADMIN_USER_GUIDE.md`).
 - GitHub Actions `.github/workflows/cap-nhat-web.yml`: mỗi lần `main` đổi thì kiểm tra dữ liệu, chạy kiểm thử, tạo `sp/`, `bai/`, `trang/`, `sitemap.xml`, `robots.txt` và commit lại (tác giả `github-actions[bot]`). Các thư mục `sp/`, `bai/`, `trang/` là file tự sinh, không sửa tay.
@@ -10,9 +11,10 @@
 ## Đưa thay đổi lên web
 
 1. Merge PR vào `main`.
-2. GitHub Pages tự đăng lại sau khoảng 1–2 phút.
+2. GitHub Pages và tích hợp Cloudflare Pages sẽ xử lý thay đổi theo cấu hình hiện có. Kiểm tra thêm trạng thái **Cloudflare Pages** trên commit và mở tên miền thật `https://sona.ai.vn/`.
 3. Lần đầu sau khi merge: mở tab **Actions** của kho, xem lượt chạy "Kiểm tra dữ liệu và tạo trang SEO" có dấu xanh.
-   - Nếu bước "Lưu trang SEO vào kho" báo lỗi quyền: vào **Settings → Actions → General → Workflow permissions**, chọn **Read and write permissions**, bấm Save, rồi bấm **Re-run jobs**.
+   - Nếu bước "Lưu trang SEO vào kho" báo lỗi, đọc log để phân biệt lỗi quyền, xung đột cập nhật hoặc yêu cầu dựng Pages thất bại. Workflow chỉ cập nhật các trang SEO đã sinh, thử tối đa 3 lần từ `main` mới nhất và báo đỏ nếu chưa hoàn tất.
+   - Đợi cả workflow kiểm tra dữ liệu lẫn **pages build and deployment** thành công rồi kiểm tra web thật. Thời gian xuất bản có thể tới 10 phút; không xem việc merge xong là đã đăng web xong.
 
 ## Gắn tên miền riêng
 
@@ -34,6 +36,8 @@ npm test                             # kiểm tra dữ liệu và trang SEO
 npm run tao-seo                      # tạo thử trang SEO (không commit các file sinh ra)
 npm run test:giao-dien               # kiểm thử trên trình duyệt, cần Playwright
 ```
+
+Nếu máy đã có Chromium ở đường dẫn riêng, đặt biến môi trường `PLAYWRIGHT_EXECUTABLE_PATH` trỏ tới file thực thi rồi chạy kiểm thử. Không còn phụ thuộc đường dẫn Chromium cố định của Linux.
 
 ## Không làm
 

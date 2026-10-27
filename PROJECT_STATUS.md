@@ -15,10 +15,18 @@ Cập nhật: 27/10/2026
 
 **Tự động trên GitHub** (`.github/workflows/cap-nhat-web.yml`): kiểm tra dữ liệu và tạo trang SEO, `sitemap.xml`, `robots.txt` sau mỗi lần dữ liệu thay đổi.
 
+## Sửa lỗi trước khi triển khai
+
+- SEO dùng tên miền chính thức `https://sona.ai.vn/`.
+- Admin chặn sửa hoặc xóa nếu cùng nội dung vừa thay đổi ở phiên khác; không tạo lại bài đã bị người khác xóa.
+- Tổng quan đọc đúng workflow kiểm tra dữ liệu, không nhầm với workflow đăng Pages.
+- Workflow tạo lại SEO từ `main` mới nhất khi có cập nhật đồng thời; báo lỗi nếu không đẩy được commit hoặc không yêu cầu được Pages dựng lại.
+- Công cụ kiểm tra dữ liệu dùng đường dẫn tương thích Windows. Kiểm thử trình duyệt cho phép chỉ định `PLAYWRIGHT_EXECUTABLE_PATH`.
+
 ## Kiểm thử đã chạy
 
-- `npm test`: 8/8 kiểm tra dữ liệu và trang SEO đạt, gồm cả dữ liệu thật trong kho.
-- `node tests/giao-dien.e2e.js`: 15/15 kịch bản trên Chromium đạt, GitHub được giả lập ghi vào bản sao web: chặn khi chưa đăng nhập, mã sai, tài khoản chỉ xem, API ghi không quyền bị 403/401, đăng nhập/đăng xuất, tạo/sửa/xóa trang, nháp/xuất bản bài, tạo/ẩn/hiện/sửa giá sản phẩm, kiểm tra dữ liệu, tải ảnh và chặn file giả, banner trang chủ, cấu hình liên hệ, không ghi đè bài tự động, xem trước, trang SEO, giao diện điện thoại và máy tính bảng không tràn ngang.
+- `npm test`: 12/12 kiểm tra dữ liệu, trang SEO và xử lý xung đột đạt, gồm cả dữ liệu thật trong kho.
+- `node tests/giao-dien.e2e.js`: 16/16 kịch bản trên Chromium đạt, GitHub được giả lập ghi vào bản sao web: chặn khi chưa đăng nhập, mã sai, tài khoản chỉ xem, API ghi không quyền bị 403/401, đăng nhập/đăng xuất, tạo/sửa/xóa trang, nháp/xuất bản bài, tạo/ẩn/hiện/sửa giá sản phẩm, kiểm tra dữ liệu, tải ảnh và chặn file giả, banner trang chủ, cấu hình liên hệ, không ghi đè bài tự động hoặc bài vừa được người khác sửa, xem trước, trang SEO, giao diện điện thoại và máy tính bảng không tràn ngang.
 - Dự án không có bước build hay type-check (HTML, CSS, JavaScript thuần).
 
 ## Chưa kiểm được trong môi trường dựng
