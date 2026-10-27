@@ -17,6 +17,7 @@ catch { ({ chromium } = await import(pathToFileURL(join(execSync("npm root -g").
 
 const SITE = mkdtempSync(join(tmpdir(), "sona-web-"));
 const SHOTS = process.env.SHOTS || mkdtempSync(join(tmpdir(), "sona-anh-"));
+mkdirSync(SHOTS, { recursive: true });
 cpSync(ROOT, SITE, { recursive: true, filter: s => !/[\\/](\.git|node_modules)([\\/]|$)/.test(s) });
 
 const MIME = { ".html": "text/html; charset=utf-8", ".js": "text/javascript", ".css": "text/css", ".json": "application/json", ".png": "image/png", ".jpg": "image/jpeg", ".webp": "image/webp", ".xml": "application/xml", ".txt": "text/plain" };
@@ -61,18 +62,18 @@ async function github(route) {
   }
   if (path === "/commits") return json(route, 200, commits.slice(0, 8));
   if (path === "/pages/builds/latest") return json(route, 403, {});
-  if (path === "/actions/runs") return json(route, 403, {});
+  if (path === "/actions/workflows/cap-nhat-web.yml/runs") return json(route, 403, {});
   return json(route, 404, {});
 }
 
 /* ---------- chạy kiểm thử ---------- */
 const results = []; let current = "";
-async function step(name, fn) { current = name; try { await fn(); results.push(["ĐẠT", name]); } catch (e) { results.push(["LỖI", name + " → " + e.message.split("\n")[0]]); } }
+async function step(name, fn) { current = name; try { await fn(); results.push(["ĐẠT", name]); } catch (e) { results.push(["LỖI", name + " → " + e.message.split("\n")[0]]); } console.log(results.at(-1).join("  ")); }
 const ok = (c, msg) => { if (!c) throw new Error(msg); };
 const readJ = f => JSON.parse(readFileSync(join(SITE, f), "utf8"));
 
-let browser;
-try { browser = await chromium.launch(); } catch { browser = await chromium.launch({ executablePath: "/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell" }); }
+const browser = await chromium.launch(process.env.PLAYWRIGHT_EXECUTABLE_PATH
+  ? { executablePath: process.env.PLAYWRIGHT_EXECUTABLE_PATH } : {});
 const ctx = await browser.newContext({ viewport: { width: 1280, height: 860 } });
 await ctx.route("https://api.github.com/**", github);
 await ctx.route("https://raw.githubusercontent.com/**", r => { const p = new URL(r.request().url()).pathname.split("/").slice(4).join("/"); const f = join(SITE, decodeURIComponent(p)); return existsSync(f) ? r.fulfill({ body: readFileSync(f) }) : r.fulfill({ status: 404 }); });
@@ -219,6 +220,18 @@ await step("11. Không ghi đè bài học tự động vừa thêm trong lúc �
   const now = readJ("posts.json");
   ok(now.some(a => a.slug === "bai-tu-dong-moi"), "mất bài tự động"); ok(now.find(a => a.slug === "bai-thu-nghiem-nhap").tom_tat === "Tóm tắt đã sửa", "chưa lưu bài sửa");
 });
+await step("11b. Hai người sửa cùng bài: chặn ghi đè thay đổi mới", async () => {
+  await page.goto(`${BASE}/admin/#/bai-viet/bai-thu-nghiem-nhap`); await page.waitForSelector("#f_tieu_de");
+  const posts = readJ("posts.json"), article = posts.find(a => a.slug === "bai-thu-nghiem-nhap");
+  article.noi_dung = "Nội dung mới từ người quản trị khác";
+  writeFileSync(join(SITE, "posts.json"), JSON.stringify(posts, null, 2));
+  await page.fill("#f_tom_tat", "Bản sửa cũ chưa được lưu"); await page.click("#pub");
+  ok(/vừa được sửa ở nơi khác/.test(await toastText()), "không thông báo xung đột");
+  ok(readJ("posts.json").find(a => a.slug === article.slug).noi_dung === article.noi_dung, "ghi đè mất bản mới");
+  page.once("dialog", d => d.accept());
+  await page.reload(); await page.waitForSelector("#f_tieu_de");
+});
+
 await step("12. Xem trước hiện nội dung chưa lưu trong khung điện thoại", async () => {
   await page.goto(`${BASE}/admin/#/san-pham/san-pham-thu`); await page.waitForSelector("#f_ten");
   await page.fill("#f_ten", "Tên chưa lưu"); await page.click("#pv");
