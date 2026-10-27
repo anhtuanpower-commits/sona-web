@@ -18,6 +18,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -25,9 +27,6 @@ jobs:
         run: node scripts/kiem-tra-du-lieu.js
       - name: Kiểm tra code
         run: node --test "tests/*.test.js"
-      - name: Tạo trang SEO, sitemap.xml, robots.txt
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-        run: node scripts/tao-trang-seo.js
       - name: Lưu trang SEO vào kho
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         env:
@@ -35,8 +34,30 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if git diff --cached --quiet; then echo "Trang SEO đã mới nhất"; exit 0; fi
-          git commit -m "Cập nhật trang SEO tự động"
-          for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break; sleep 5; done
-          gh api -X POST "repos/${{ github.repository }}/pages/builds" >/dev/null || echo "Không yêu cầu được GitHub Pages dựng lại, lần lưu sau sẽ cập nhật"
+          saved=false
+          for attempt in 1 2 3; do
+            # Runner chỉ chứa bản sao tạm. Luôn tạo lại SEO từ main mới nhất
+            # nếu Admin hoặc bài học tự động vừa cập nhật trong lúc đang chạy.
+            git fetch origin main
+            git reset --hard origin/main
+            node scripts/kiem-tra-du-lieu.js
+            node --test "tests/*.test.js"
+            node scripts/tao-trang-seo.js
+            git add -- index.html sitemap.xml robots.txt
+            for dir in sp bai trang; do
+              if [ -d "$dir" ] || [ -n "$(git ls-files -- "$dir/")" ]; then
+                git add -A -- "$dir"
+              fi
+            done
+            if git diff --cached --quiet; then saved=true; break; fi
+            git commit -m "Cập nhật trang SEO tự động"
+            if git push origin HEAD:main; then saved=true; break; fi
+            sleep 5
+          done
+          if [ "$saved" != true ]; then
+            echo "::error::Không lưu được trang SEO sau 3 lần thử."
+            exit 1
+          fi
+          # GITHUB_TOKEN không tự kích hoạt Pages khi bot đẩy commit.
+          # Yêu cầu dựng lại rõ ràng và báo lỗi nếu yêu cầu thất bại.
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" >/dev/null
