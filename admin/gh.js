@@ -124,4 +124,4 @@ export async function deleteFile(path, sha, message) {
 /* ---------- trạng thái web ---------- */
 export const recentCommits = () => gh(repo(`commits?sha=${BRANCH}&per_page=8`));
 export const pagesBuild = () => gh(repo("pages/builds/latest"));
-export const lastRun = () => gh(repo(`actions/runs?branch=${BRANCH}&per_page=1`));
+export const lastRun = () => gh(repo(`actions/workflows/cap-nhat-web.yml/runs?branch=${BRANCH}&per_page=1`));

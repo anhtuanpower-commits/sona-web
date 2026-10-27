@@ -1,6 +1,7 @@
 /* Trang quản trị web SONA. Dữ liệu web nằm trong kho GitHub (site.json, products.json, posts.json, pages.json, img/).
    Mọi thay đổi được ghi thẳng vào kho qua GitHub API; GitHub Pages tự đăng lại web sau khoảng 1–2 phút. */
 import * as G from "./gh.js";
+import { upsert, removeBy } from "./noi-dung.js";
 import { $, $$, esc, norm, fmtMoney, fmtSize, fmtDate, ago, I, toast, modal, confirmBox, field, toggle, mdEditor, imageField, setImgSrc,
   formData, showErrors, bindCounters, bindMd, loading, empty, chip } from "./ui.js";
 import { prepareImage, usages, ACCEPT } from "./anh.js";
@@ -240,13 +241,6 @@ async function doSave(btn, fn, okMsg = SAVED) {
     return false;
   } finally { if (btn.isConnected) btn.innerHTML = old; $$(".act button").forEach(b => { b.disabled = false; }); }
 }
-const upsert = (orig, item) => list => {
-  if (list.some(x => x.slug === item.slug && x.slug !== orig)) throw new G.ApiError(`Đường dẫn "${item.slug}" vừa được nội dung khác dùng. Đổi đường dẫn rồi lưu lại.`, 422);
-  const i = orig ? list.findIndex(x => x.slug === orig) : -1;
-  if (i >= 0) list[i] = item; else list.push(item);
-  return list;
-};
-const removeBy = slug => list => list.filter(x => x.slug !== slug);
 
 /* ================= xem trước ================= */
 function preview(hash, patch) {
@@ -541,7 +535,7 @@ function viewContent(key, slug) {
     const x = collect(status); if (!valid(x)) return;
     if (!isNew && x.slug !== a.slug && !isDraft(a) && !await confirmBox(`Đổi đường dẫn thì link cũ đã chia sẻ (…/${a.slug}) sẽ không mở được nữa. Vẫn đổi?`, { yes: "Đổi đường dẫn" })) return;
     const verb = status === "nhap" ? (isDraft(a) || isNew ? "Lưu nháp" : "Gỡ về nháp") : isNew || isDraft(a) ? "Xuất bản" : "Sửa";
-    const ok = await doSave(btn, () => G.commit(key, upsert(isNew ? null : a.slug, x), `${verb} ${K.one}: ${x.tieu_de}`), status === "nhap" ? "Đã lưu nháp. Khách chưa thấy nội dung này." : SAVED);
+    const ok = await doSave(btn, () => G.commit(key, upsert(orig, x), `${verb} ${K.one}: ${x.tieu_de}`), status === "nhap" ? "Đã lưu nháp. Khách chưa thấy nội dung này." : SAVED);
     if (ok) go(`${K.list}/${x.slug}`);
   };
   $("#pub").onclick = () => save($("#pub"), "xuat_ban");
@@ -549,7 +543,7 @@ function viewContent(key, slug) {
   $("#pv").onclick = () => { const x = collect("xuat_ban"); x.slug = x.slug || "xem-truoc"; preview(K.hash(x.slug), snap => { snap[key] = snap[key].filter(y => y.slug !== a.slug).concat(x); }); };
   if ($("#del")) $("#del").onclick = async () => {
     if (!await confirmBox(`Xóa hẳn ${K.one} "${a.tieu_de}"? Không khôi phục được trong Admin (vẫn còn trong lịch sử GitHub).`, { yes: "Xóa", danger: true, title: "Xóa " + K.one })) return;
-    if (await doSave($("#del"), () => G.commit(key, removeBy(a.slug), `Xóa ${K.one}: ${a.tieu_de}`), `Đã xóa ${K.one}.`)) go(K.list);
+    if (await doSave($("#del"), () => G.commit(key, removeBy(orig), `Xóa ${K.one}: ${a.tieu_de}`), `Đã xóa ${K.one}.`)) go(K.list);
   };
   if (!CAN_WRITE) $$("#pub,#dr,#del").forEach(b => { b.disabled = true; });
 }
@@ -682,12 +676,12 @@ function viewProductForm(slug) {
     e.preventDefault();
     const x = collect(); if (!valid(x)) return;
     if (!isNew && x.slug !== p.slug && !await confirmBox(`Đổi đường dẫn thì link cũ đã chia sẻ (…/sp/${p.slug}) sẽ không mở được nữa. Vẫn đổi?`, { yes: "Đổi đường dẫn" })) return;
-    if (await doSave($("#sv"), () => G.commit("products", upsert(isNew ? null : p.slug, x), (isNew ? "Thêm sản phẩm: " : "Sửa sản phẩm: ") + x.ten))) go("#/san-pham/" + x.slug);
+    if (await doSave($("#sv"), () => G.commit("products", upsert(orig, x), (isNew ? "Thêm sản phẩm: " : "Sửa sản phẩm: ") + x.ten))) go("#/san-pham/" + x.slug);
   };
   $("#pv").onclick = () => { const x = collect(); x.slug = x.slug || "xem-truoc"; delete x.an; preview("#sp/" + x.slug, snap => { snap.products = snap.products.filter(y => y.slug !== p.slug).concat(x); }); };
   if ($("#del")) $("#del").onclick = async () => {
     if (!await confirmBox(`Xóa hẳn "${p.ten}" khỏi web? Bài viết đang gợi ý sản phẩm này sẽ không hiện gợi ý nữa.`, { yes: "Xóa", danger: true, title: "Xóa sản phẩm" })) return;
-    if (await doSave($("#del"), () => G.commit("products", removeBy(p.slug), "Xóa sản phẩm: " + p.ten), "Đã xóa sản phẩm.")) go("#/san-pham");
+    if (await doSave($("#del"), () => G.commit("products", removeBy(orig), "Xóa sản phẩm: " + p.ten), "Đã xóa sản phẩm.")) go("#/san-pham");
   };
   if (!CAN_WRITE) $$("#sv,#del").forEach(b => { b.disabled = true; });
 }
