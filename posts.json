@@ -1,5 +1,15 @@
 [
   {
+    "slug": "tin-dan-khach-cham-soc-sau-dich-vu-bang-ai",
+    "tieu_de": "Nhờ AI viết tin Zalo dặn khách chăm sóc sau khi làm",
+    "tom_tat": "Một câu lệnh biến lời thợ hay dặn thành tin Zalo ngắn, gửi ngay khi khách vừa ra về.",
+    "chu_de": "Chăm khách",
+    "ngay": "2026-10-27",
+    "phut": 3,
+    "viec": "Hôm nay nhờ AI viết 1 tin Zalo dặn khách chăm sóc sau dịch vụ bán chạy nhất, rồi lưu làm tin trả lời nhanh.",
+    "noi_dung": "Chép câu lệnh dưới đây vào ChatGPT, thay chữ trong ngoặc vuông bằng thông tin tiệm mình.\n\n> Tôi làm [dịch vụ, ví dụ: nối mi / sơn gel / gội đầu dưỡng sinh] ở tiệm [tên tiệm]. Hãy viết tin Zalo dặn khách cách giữ kết quả sau khi làm, dựa đúng các lời dặn của tôi sau đây: [ghi 3-5 điều thợ hay dặn, ví dụ: không để ướt 24 giờ, không dùng dầu tẩy trang quanh mắt]. Viết thân thiện, dưới 6 dòng, mỗi lời dặn 1 dòng, không tự thêm lời dặn nào khác. Cuối tin mời khách nhắn lại tiệm nếu thấy có gì lạ.\n\n## Vì sao nên gửi\nKhách thường quên lời thợ dặn khi vừa ra về. Một tin ngắn trên Zalo giúp khách đọc lại lúc cần.\n\n## Làm thế nào\n- Viết **lời dặn của chính thợ** vào ngoặc vuông. AI chỉ viết lại cho dễ đọc, không tự nghĩ ra cách chăm sóc.\n- Đọc lại tin AI viết. Thấy dòng nào **không phải lời của thợ** thì xóa.\n- Gửi tin **ngay khi khách vừa ra về**, lúc khách còn nhớ buổi làm.\n- Lưu tin này vào **tin trả lời nhanh** của Zalo, lần sau chỉ bấm chọn là gửi được.\n\n## Lưu ý\n- Mỗi dịch vụ nên có **một tin riêng**, đừng gộp chung một tin dài.\n- Khách nhắn lại thấy đỏ, rát hay khó chịu thì **chủ tiệm hoặc thợ tự trả lời**, không để AI trả lời thay."
+  },
+  {
     "slug": "chinh-sach-doi-tra-shop-online-bang-ai",
     "tieu_de": "Nhờ AI viết chính sách đổi trả ngắn gọn cho shop online",
     "tom_tat": "Khách hay hỏi được đổi không, ai trả ship. Tự quyết điều khoản trước, rồi nhờ ChatGPT viết thành 6 dòng dễ hiểu để ghim lên trang và gửi Zalo.",
