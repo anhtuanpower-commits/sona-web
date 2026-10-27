@@ -1,5 +1,105 @@
 [
   {
+    "slug": "tin-dan-khach-cham-soc-sau-dich-vu-bang-ai",
+    "tieu_de": "Nhờ AI viết tin Zalo dặn khách chăm sóc sau khi làm",
+    "tom_tat": "Một câu lệnh biến lời thợ hay dặn thành tin Zalo ngắn, gửi ngay khi khách vừa ra về.",
+    "chu_de": "Chăm khách",
+    "ngay": "2026-10-27",
+    "phut": 3,
+    "viec": "Hôm nay nhờ AI viết 1 tin Zalo dặn khách chăm sóc sau dịch vụ bán chạy nhất, rồi lưu làm tin trả lời nhanh.",
+    "noi_dung": "Chép câu lệnh dưới đây vào ChatGPT, thay chữ trong ngoặc vuông bằng thông tin tiệm mình.\n\n> Tôi làm [dịch vụ, ví dụ: nối mi / sơn gel / gội đầu dưỡng sinh] ở tiệm [tên tiệm]. Hãy viết tin Zalo dặn khách cách giữ kết quả sau khi làm, dựa đúng các lời dặn của tôi sau đây: [ghi 3-5 điều thợ hay dặn, ví dụ: không để ướt 24 giờ, không dùng dầu tẩy trang quanh mắt]. Viết thân thiện, dưới 6 dòng, mỗi lời dặn 1 dòng, không tự thêm lời dặn nào khác. Cuối tin mời khách nhắn lại tiệm nếu thấy có gì lạ.\n\n## Vì sao nên gửi\nKhách thường quên lời thợ dặn khi vừa ra về. Một tin ngắn trên Zalo giúp khách đọc lại lúc cần.\n\n## Làm thế nào\n- Viết **lời dặn của chính thợ** vào ngoặc vuông. AI chỉ viết lại cho dễ đọc, không tự nghĩ ra cách chăm sóc.\n- Đọc lại tin AI viết. Thấy dòng nào **không phải lời của thợ** thì xóa.\n- Gửi tin **ngay khi khách vừa ra về**, lúc khách còn nhớ buổi làm.\n- Lưu tin này vào **tin trả lời nhanh** của Zalo, lần sau chỉ bấm chọn là gửi được.\n\n## Lưu ý\n- Mỗi dịch vụ nên có **một tin riêng**, đừng gộp chung một tin dài.\n- Khách nhắn lại thấy đỏ, rát hay khó chịu thì **chủ tiệm hoặc thợ tự trả lời**, không để AI trả lời thay."
+  },
+  {
+    "slug": "chinh-sach-doi-tra-shop-online-bang-ai",
+    "tieu_de": "Nhờ AI viết chính sách đổi trả ngắn gọn cho shop online",
+    "tom_tat": "Khách hay hỏi được đổi không, ai trả ship. Tự quyết điều khoản trước, rồi nhờ ChatGPT viết thành 6 dòng dễ hiểu để ghim lên trang và gửi Zalo.",
+    "chu_de": "Bán hàng",
+    "ngay": "2026-10-23",
+    "phut": 3,
+    "viec": "Hôm nay nhờ AI viết chính sách đổi trả 6 dòng, ghim lên trang Facebook của shop.",
+    "noi_dung": "Khách mua online hay hỏi đi hỏi lại: hàng lỗi có đổi không, đổi trong mấy ngày, ai trả tiền ship. Một **chính sách đổi trả ngắn, ghi số rõ ràng** giúp shop trả lời một lần cho tất cả.\n\n## Câu lệnh chép dùng ngay\n\n> Viết chính sách đổi trả cho shop [tên shop] bán [loại hàng], tối đa 6 dòng, mỗi dòng một ý, gọi khách là [anh/chị]. Điều khoản của shop: được đổi trong [số] ngày kể từ khi nhận hàng; hàng phải [còn tem, chưa dùng]; shop [đổi món khác / hoàn tiền]; hàng không đổi: [hàng giảm giá, hàng đặt riêng]; phí ship khi đổi: [shop trả nếu hàng lỗi, khách trả nếu đổi ý]; cách yêu cầu: nhắn Zalo [số Zalo] kèm ảnh hàng. Không thêm điều khoản nào khác, không dùng từ tiếng Anh.\n\n## Làm theo 3 bước\n\n- **Tự quyết điều khoản trước**: điền số ngày, hàng nào không đổi, ai trả ship vào câu lệnh. AI chỉ viết lại cho dễ hiểu, không quyết thay shop.\n- Dán vào ChatGPT, đọc lại từng dòng, xóa chỗ nào AI tự thêm mà shop không làm được.\n- Ghim bài lên trang Facebook, lưu làm tin trả lời nhanh trên Zalo, và dán vào cuối tin xác nhận đơn.\n\n## Lưu ý\n\n- Ghi **số cụ thể** như \"7 ngày kể từ khi nhận hàng\", tránh chữ chung chung như \"sớm\" hay \"tùy trường hợp\".\n- Nói rõ **ai trả tiền ship** khi đổi. Đây là điều khách hỏi nhiều nhất.\n- Đã ghi thì làm đúng như ghi. Muốn đổi điều khoản thì sửa bài ghim trước.\n\nMẹo nhỏ: khách nhắn hỏi đổi trả, chỉ cần gửi lại tin đã lưu rồi hỏi khách cần giúp gì thêm."
+  },
+  {
+    "slug": "tin-xin-khach-danh-gia-google-bang-ai",
+    "tieu_de": "Nhờ AI soạn tin xin khách để lại đánh giá trên Google",
+    "tom_tat": "Khách hài lòng thường quên viết đánh giá. Nhờ ChatGPT soạn một tin cảm ơn ngắn kèm link đánh giá, gửi Zalo ngay sau khi khách về.",
+    "chu_de": "Chăm khách",
+    "ngay": "2026-10-22",
+    "phut": 3,
+    "viec": "Hôm nay nhờ AI soạn một tin cảm ơn kèm link đánh giá Google, gửi cho khách vừa làm xong.",
+    "noi_dung": "Khách vui thì ít khi tự nhớ viết đánh giá. Một **tin cảm ơn kèm link đánh giá** gửi ngay sau buổi làm giúp khách chỉ cần bấm là viết được.\n\n## Câu lệnh chép dùng ngay\n\n> Viết một tin nhắn Zalo cảm ơn khách vừa dùng dịch vụ tại tiệm [loại tiệm] tên [tên tiệm]. Tin tối đa 4 câu, gọi khách là [anh/chị], có chỗ [TÊN KHÁCH] và [LINK ĐÁNH GIÁ]. Mời khách nếu có thời gian thì viết vài dòng cảm nhận thật trên Google. Không hứa quà, không giảm giá, không bảo khách cho 5 sao hay nhắc tên thợ. Giọng thân thiện, không dùng từ tiếng Anh.\n\n## Làm theo 3 bước\n\n- Mở trang quản lý Google của tiệm (Google Business Profile), tìm mục xin đánh giá để **lấy link hoặc mã QR** của tiệm.\n- Dán câu lệnh vào ChatGPT, đọc lại, sửa cho giống cách tiệm hay nói rồi lưu vào ghi chú điện thoại.\n- Khách làm xong và vui vẻ ra về thì chép mẫu, điền tên khách và link, gửi Zalo.\n\n## Đúng luật Google\n\n- Google **cấm tặng quà hay giảm giá để đổi lấy đánh giá**. Chỉ cảm ơn và mời, không đổi chác.\n- Không giao chỉ tiêu số đánh giá cho thợ, không bảo khách khen tên một thợ cụ thể.\n- Khách nào chê thì cảm ơn và trả lời lịch sự, không xin khách sửa đánh giá.\n\nMẹo nhỏ: in mã QR đánh giá dán ở quầy thu ngân để khách quét luôn khi trả tiền."
+  },
+  {
+    "slug": "tin-xac-nhan-don-truoc-khi-giao-bang-ai",
+    "tieu_de": "Nhờ AI soạn tin xác nhận đơn trước khi gửi hàng",
+    "tom_tat": "Đơn thu tiền khi giao mà khách không nhận là shop mất tiền ship hai chiều. Nhờ ChatGPT soạn sẵn một tin xác nhận đơn ngắn để gửi Zalo trước khi đóng gói.",
+    "chu_de": "Bán hàng",
+    "ngay": "2026-10-21",
+    "phut": 3,
+    "viec": "Hôm nay nhờ AI soạn một tin xác nhận đơn, gửi Zalo cho khách trước khi đóng gói.",
+    "noi_dung": "Khách đặt vội rồi quên, hoặc ghi sai địa chỉ, là đơn dễ bị trả về. Một **tin xác nhận gửi trước khi đóng gói** giúp shop biết khách còn muốn nhận không.\n\n## Câu lệnh chép dùng ngay\n\n> Viết một tin nhắn Zalo xác nhận đơn hàng cho shop [tên shop] bán [loại hàng]. Tin tối đa 6 dòng, gọi khách là [anh/chị], có chỗ [TÊN KHÁCH], [MÓN HÀNG], [TỔNG TIỀN], [ĐỊA CHỈ], [NGÀY GIAO DỰ KIẾN]. Cuối tin mời khách trả lời số 1 để xác nhận, hoặc nhắn lại nếu cần sửa địa chỉ. Giọng thân thiện, không dùng từ tiếng Anh, không hứa quà hay giảm giá.\n\n## Làm theo 3 bước\n\n- Điền tên shop và loại hàng vào câu lệnh, dán vào ChatGPT, đọc lại và sửa cho giống cách shop hay nói.\n- Lưu mẫu tin vào ghi chú điện thoại.\n- Có đơn mới thì chép mẫu, **điền đúng món, tiền, địa chỉ** rồi gửi Zalo ngay cho khách.\n\n## Lưu ý\n\n- Chỉ đóng gói đơn khách **đã trả lời xác nhận**. Đơn chưa trả lời thì gọi một cuộc ngắn trước khi gửi.\n- Đơn giá trị cao hoặc khách lạ có thể xin cọc trước tiền ship, nói rõ lý do một cách lịch sự.\n- Khách sửa địa chỉ thì **sửa ngay trên phiếu gửi hàng**, rồi nhắn lại cho khách xem.\n\nMẹo nhỏ: ghi chú cạnh mỗi đơn là đã xác nhận, đang chờ hay đã hủy để không gửi nhầm."
+  },
+  {
+    "slug": "tin-nhac-lich-hen-ngay-mai-bang-ai",
+    "tieu_de": "Nhờ AI soạn tin nhắc khách lịch hẹn ngày mai",
+    "tom_tat": "Khách quên lịch là tiệm mất giờ trống. Nhờ ChatGPT soạn sẵn một tin nhắc ngắn, lịch sự, tối nào cũng chỉ việc đổi tên và giờ rồi gửi Zalo.",
+    "chu_de": "Chăm khách",
+    "ngay": "2026-10-20",
+    "phut": 3,
+    "viec": "Tối nay nhờ AI soạn một tin nhắc lịch hẹn, rồi gửi Zalo cho từng khách có lịch ngày mai.",
+    "noi_dung": "Khách bận rộn dễ quên lịch đã hẹn. Một **tin nhắc ngắn gửi tối hôm trước** giúp khách nhớ, và nếu bận thì khách báo sớm để tiệm xếp người khác.\n\n## Câu lệnh chép dùng ngay\n\n> Viết 2 mẫu tin nhắn Zalo nhắc khách lịch hẹn ngày mai cho tiệm [loại tiệm] tên [tên tiệm], địa chỉ [địa chỉ]. Mẫu 1 cho dịch vụ thường, mẫu 2 cho dịch vụ cần chuẩn bị trước ([dịch vụ], dặn khách: [lời dặn]). Mỗi mẫu tối đa 4 câu, xưng tiệm, gọi khách là [anh/chị], có chỗ [TÊN KHÁCH], [GIỜ], [DỊCH VỤ]. Cuối tin mời khách trả lời số 1 để giữ lịch, hoặc nhắn sớm nếu cần đổi giờ. Giọng thân thiện, không dùng từ tiếng Anh, không hứa giảm giá.\n\n## Làm theo 3 bước\n\n- Điền thông tin tiệm vào câu lệnh, dán vào ChatGPT, đọc lại và sửa cho giống cách tiệm hay nói.\n- Lưu 2 mẫu vào ghi chú điện thoại.\n- Mỗi tối xem sổ lịch ngày mai, chép mẫu, **đổi tên, giờ, dịch vụ** rồi gửi Zalo cho từng khách.\n\n## Lưu ý\n\n- Zalo cá nhân **không tự gửi tin theo giờ** cho khách, nên đặt báo thức lúc 19 giờ để nhớ gửi.\n- Dịch vụ cần dặn trước (ví dụ nhuộm tóc) thì nên nhắc sớm hơn, khoảng 2 ngày.\n- Khách trả lời đổi giờ thì **ghi ngay vào sổ lịch**, rồi nhắn lại giờ mới cho khách.\n\nMẹo nhỏ: khách nào không trả lời, sáng hôm sau gọi một cuộc ngắn trước giờ hẹn."
+  },
+  {
+    "slug": "noi-quy-chia-luot-khach-cho-tho-bang-ai",
+    "tieu_de": "Nhờ AI viết nội quy chia lượt khách cho thợ, dán ở quầy",
+    "tom_tat": "Tiệm đông thợ hay cãi nhau vì ai được nhận khách. Nhờ ChatGPT viết một bảng nội quy chia lượt ngắn, rõ ràng để cả tiệm cùng làm theo.",
+    "chu_de": "Quản lý tiệm",
+    "ngay": "2026-10-18",
+    "phut": 3,
+    "viec": "Hôm nay nhờ AI viết nội quy chia lượt khách, đọc cho thợ nghe rồi in dán ở quầy.",
+    "noi_dung": "Khi khách vào mà không hẹn trước, thợ dễ giận nhau vì nghĩ người khác được nhiều khách hơn. Một **nội quy chia lượt viết rõ** giúp ai cũng biết mình là người kế tiếp.\n\n## Câu lệnh chép dùng ngay\n\n> Viết nội quy chia lượt khách vãng lai cho tiệm [loại tiệm] tên [tên tiệm] có [số] thợ, tối đa 8 dòng, câu ngắn, dễ hiểu, không dùng từ tiếng Anh. Luật của tiệm: thợ vào ca trước nhận khách trước; [các dịch vụ tính nửa lượt] tính nửa lượt, các dịch vụ khác tính một lượt; ai ít lượt nhất trong ngày thì nhận khách tiếp theo; khách chỉ định thợ thì [cách tính của tiệm]. Chỉ dùng đúng luật tôi đưa, chỗ nào chưa rõ thì ghi [CẦN ĐIỀN].\n\n## Làm theo 3 bước\n\n- Điền luật thật của tiệm vào câu lệnh, dán vào ChatGPT, đọc lại và sửa chỗ chưa đúng.\n- Đọc cho cả tiệm nghe, hỏi thợ có thấy chỗ nào chưa công bằng, sửa xong **mới in**.\n- In khổ giấy A5, dán ở quầy và gửi vào nhóm Zalo của thợ.\n\n## Giữ cho công bằng\n\n- Dùng một tờ giấy hoặc bảng ở quầy, **ghi lượt ngay khi giao khách**, không để cuối ngày mới nhớ.\n- Khách chỉ định thợ thì làm đúng như nội quy đã ghi, không đổi tùy lúc.\n- Mỗi tháng hỏi lại thợ một lần, có gì vướng thì sửa nội quy.\n\nMẹo nhỏ: lưu câu lệnh vào ghi chú điện thoại, khi đổi luật chỉ cần sửa rồi dán lại."
+  },
+  {
+    "slug": "nhac-khach-tra-no-lich-su-bang-ai",
+    "tieu_de": "Nhờ AI soạn tin nhắc khách trả nợ mà vẫn giữ được khách",
+    "tom_tat": "Ngại nhắc thì mất tiền, nhắc gắt thì mất khách. Nhờ ChatGPT soạn một tin Zalo lịch sự, ghi đúng số tiền và cách chuyển khoản.",
+    "chu_de": "Bán hàng",
+    "ngay": "2026-10-17",
+    "phut": 3,
+    "viec": "Hôm nay chọn một khách đang nợ, nhờ AI soạn tin nhắc lịch sự, kiểm lại số tiền rồi gửi qua Zalo.",
+    "noi_dung": "Nhiều chủ tiệm ngại nhắc nợ nên cứ để mãi, đến khi nhắc thì lời lẽ lại gắt. Một tin **lịch sự, đúng số tiền, có sẵn cách trả** giúp khách trả nhanh mà vẫn quay lại.\n\n## Câu lệnh chép dùng ngay\n\n> Soạn tin nhắn Zalo gửi khách [tên khách] của tiệm [tên tiệm], dài dưới 60 chữ, giọng nhẹ nhàng, lịch sự, không trách móc, không dọa. Nội dung: nhắc khoản còn nợ [số tiền] đồng của [món hàng hoặc dịch vụ] ngày [ngày mua], mong khách thanh toán trước [hạn trả], chuyển khoản vào [ngân hàng, số tài khoản, tên chủ tài khoản], nội dung ghi [tên khách + số điện thoại]. Cuối tin cảm ơn khách đã ủng hộ. Chỉ dùng đúng thông tin tôi đưa, thiếu gì thì ghi [CẦN ĐIỀN].\n\n## Làm theo 3 bước\n\n- Mở sổ nợ, xem lại **đúng số tiền và ngày mua** trước khi điền vào câu lệnh.\n- Dán vào ChatGPT, đọc lại tin: sửa câu nào nghe như trách khách, xóa hết chỗ còn [CẦN ĐIỀN].\n- Gửi riêng cho khách qua Zalo, **không** nhắc trong nhóm đông người.\n\n## Giữ cho êm\n\n- Nếu khách xin thêm thời gian, hỏi một ngày cụ thể và ghi vào sổ.\n- Khi khách trả xong, nhắn **cảm ơn và xác nhận đã nhận đủ** để hai bên cùng yên tâm.\n- Không đăng tên hay ảnh khách nợ lên mạng, dễ mất khách và rắc rối.\n\nMẹo nhỏ: lưu câu lệnh vào ghi chú điện thoại, lần sau chỉ thay tên và số tiền."
+  },
+  {
+    "slug": "hoi-lich-ban-cua-tho-truoc-khi-xep-ca-bang-ai",
+    "tieu_de": "Nhờ AI soạn tin hỏi lịch bận của thợ trước khi xếp ca",
+    "tom_tat": "Xếp ca rồi mới biết thợ bận thì phải làm lại. Nhờ ChatGPT soạn một tin Zalo gọn gửi nhóm thợ, hỏi ngày bận và ngày xin nghỉ của tuần sau.",
+    "chu_de": "Quản lý tiệm",
+    "ngay": "2026-10-16",
+    "phut": 3,
+    "viec": "Hôm nay nhờ AI soạn tin hỏi lịch bận tuần sau và gửi vào nhóm Zalo của thợ.",
+    "noi_dung": "Xếp ca xong mới biết thợ bận thì phải xếp lại từ đầu. Hỏi lịch bận **trước khi xếp** và gửi lịch **sớm 1 tuần** giúp cả tiệm đỡ đổi ca vào phút chót.\n\n## Câu lệnh chép dùng ngay\n\n> Soạn tin nhắn Zalo gửi nhóm thợ của tiệm [loại tiệm] tên [tên tiệm], dài dưới 70 chữ, giọng thân thiện, không dùng từ tiếng Anh. Nội dung: nhờ mọi người báo ngày hoặc buổi bận và ngày muốn xin nghỉ của tuần từ [ngày bắt đầu] đến [ngày kết thúc], hạn báo trước [giờ, ngày], ghi mẫu trả lời ngắn để ai cũng làm theo được. Chỉ dùng đúng thông tin tôi đưa, không tự thêm thưởng hay hứa hẹn, thiếu gì thì ghi [CẦN ĐIỀN].\n\n## Làm theo 3 bước\n\n- Điền ngày của tuần sau và hạn báo vào câu lệnh, dán vào ChatGPT, đọc lại rồi sửa câu chưa đúng ý.\n- Gửi vào nhóm Zalo của thợ, ví dụ gửi **thứ Hai** và hạn báo **tối thứ Tư**.\n- Khi đủ câu trả lời mới xếp ca, rồi gửi lịch cho cả nhóm **trước ít nhất 1 tuần**.\n\n## Khi xếp ca, soát 3 điều\n\n- Mỗi thợ có **ít nhất 1 ngày nghỉ** trong tuần.\n- Không xếp ai trùng ca hoặc trùng ngày đã báo bận.\n- Chụp lại lịch đã gửi và giữ trong máy, sau này có hỏi lại về ngày công thì có cái để xem.\n\nMẹo nhỏ: lưu câu lệnh vào ghi chú điện thoại, tuần sau chỉ thay ngày."
+  },
+  {
+    "slug": "tin-nhac-khach-con-buoi-lieu-trinh-bang-ai",
+    "tieu_de": "Nhờ AI soạn tin nhắc khách còn buổi trong gói liệu trình",
+    "tom_tat": "Khách mua gói nhiều buổi rồi quên đến, đến lúc hết hạn lại không vui. Nhờ ChatGPT soạn sẵn tin Zalo nhắc khách còn mấy buổi và hạn dùng, lời lẽ nhẹ nhàng.",
+    "chu_de": "Chăm khách",
+    "ngay": "2026-10-15",
+    "phut": 3,
+    "viec": "Hôm nay lọc khách còn 2 buổi trở xuống hoặc gói sắp hết hạn, nhờ AI soạn tin nhắc và gửi cho 1 khách.",
+    "noi_dung": "Khách đã trả trước cho gói nhiều buổi mà quên đến thì dễ mất lòng khi gói hết hạn. Một tin nhắc đúng lúc giúp khách **đặt lại lịch** và nhớ tới tiệm.\n\n## Câu lệnh chép dùng ngay\n\n> Soạn tin nhắn Zalo nhắc khách dùng tiếp gói liệu trình ở tiệm [loại tiệm] tên [tên tiệm], dài dưới 60 chữ, giọng thân thiện, không dùng từ tiếng Anh, không thúc ép. Chỉ dùng đúng thông tin tôi đưa, không tự thêm ưu đãi hay hứa hẹn, thiếu gì thì ghi [CẦN ĐIỀN]. Gồm: lời chào có tên khách, tên gói, số buổi còn lại, ngày hết hạn, mời khách chọn giờ, số Zalo đặt lịch. Thông tin: [tên khách, tên gói, số buổi còn, ngày hết hạn, số Zalo].\n\n## Làm theo 3 bước\n\n- Mở sổ khách, tìm người **còn 2 buổi trở xuống** hoặc gói **còn khoảng 1 tháng** là hết hạn.\n- Điền thông tin từng khách vào cuối câu lệnh, dán vào ChatGPT, đọc lại rồi sửa câu chưa đúng ý.\n- Gửi qua Zalo và ghi vào sổ **ngày đã nhắc** để không nhắc trùng.\n\n## Trước khi gửi, soát 3 điều\n\n- **Số buổi còn lại** và **ngày hết hạn** phải khớp với sổ của tiệm.\n- Mỗi khách chỉ nhắc 1 lần cho mỗi mốc, đừng nhắn dồn dập.\n- Nếu tiệm có cho gia hạn, chỉ ghi khi **chủ tiệm đã đồng ý**, đừng để AI tự hứa.\n\nMẹo nhỏ: lưu câu lệnh vào ghi chú điện thoại, lần sau chỉ thay tên khách và số buổi."
+  },
+  {
+    "slug": "phieu-qua-tang-20-10-bang-ai",
+    "tieu_de": "Nhờ AI soạn chữ cho phiếu quà tặng 20/10 của tiệm",
+    "tom_tat": "Dịp 20/10 nhiều người muốn mua quà là một buổi làm đẹp cho mẹ, vợ, bạn gái. Nhờ ChatGPT soạn chữ cho phiếu quà tặng thật rõ ràng để in hoặc gửi ảnh qua Zalo.",
+    "chu_de": "Bán hàng",
+    "ngay": "2026-10-14",
+    "phut": 3,
+    "viec": "Hôm nay nhờ AI soạn chữ cho 1 mẫu phiếu quà tặng 20/10, tự soát hạn dùng và mã phiếu rồi in thử.",
+    "noi_dung": "Phiếu quà tặng giúp người mua tặng **một buổi làm đẹp** thay vì món đồ. Chữ trên phiếu phải rõ để người nhận đến tiệm không phải hỏi lại.\n\n## Câu lệnh chép dùng ngay\n\n> Soạn chữ cho phiếu quà tặng dịp 20/10 của tiệm [loại tiệm: spa, nail, tóc...] tên [tên tiệm], dài dưới 80 chữ, câu ngắn, không dùng từ tiếng Anh. Chỉ dùng đúng thông tin tôi đưa, không tự thêm ưu đãi hay hứa hẹn khác, thiếu gì thì ghi [CẦN ĐIỀN]. Gồm: 1 câu chúc ngắn, tên dịch vụ hoặc số tiền của phiếu, hạn dùng, cách đặt lịch, phiếu có đổi ra tiền được không, có cộng chung khuyến mãi khác không, và chỗ trống ghi mã phiếu. Thông tin: [dịch vụ hoặc số tiền, hạn dùng, số điện thoại hoặc Zalo đặt lịch].\n\n## Làm theo 3 bước\n\n- Điền **dịch vụ, hạn dùng, số Zalo** vào cuối câu lệnh rồi dán vào ChatGPT.\n- Đọc lại, sửa câu nào **không đúng cách tiệm làm**, rồi chép chữ vào mẫu phiếu trên Canva hoặc Word.\n- In thử 1 tờ hoặc lưu ảnh để gửi khách mua qua Zalo.\n\n## Trước khi dùng, soát 3 điều\n\n- **Hạn dùng** ghi rõ ngày, đừng đặt quá ngắn để người nhận kịp đến.\n- Mỗi phiếu có **một mã riêng** và tiệm ghi lại vào sổ, gạch đi khi khách đã dùng.\n- Ghi rõ phiếu **có đổi ra tiền** hay không để tránh hiểu lầm.\n\nMẹo nhỏ: chụp ảnh mỗi phiếu đã bán trước khi giao, để tra lại khi khách làm mất."
+  },
+  {
     "slug": "quy-dinh-chia-tien-tho-bang-ai",
     "tieu_de": "Nhờ AI viết rõ quy định chia tiền cho thợ của tiệm",
     "tom_tat": "Chia tiền thợ nói miệng dễ hiểu lầm cuối tháng. Nhờ ChatGPT viết lại cách tiệm đang chia thành 1 trang rõ ràng, có ví dụ tính sẵn, để chủ và thợ cùng đọc.",
