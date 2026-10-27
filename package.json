@@ -1,0 +1,12 @@
+{
+  "name": "sona-web",
+  "private": true,
+  "type": "module",
+  "description": "Web SONA: web tĩnh trên GitHub Pages, dữ liệu trong các file JSON, quản trị ở /admin/",
+  "scripts": {
+    "kiem-tra": "node scripts/kiem-tra-du-lieu.js",
+    "tao-seo": "node scripts/tao-trang-seo.js",
+    "test": "node --test \"tests/*.test.js\"",
+    "test:giao-dien": "node tests/giao-dien.e2e.js"
+  }
+}

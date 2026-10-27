@@ -6,6 +6,9 @@ Web tĩnh, chạy được trên GitHub Pages, Cloudflare Pages hoặc bất k�
 Mọi kênh (Facebook, TikTok, Zalo) sẽ dẫn link về `.../#sp/<slug>`.
 
 ## Trang quản trị
-- Địa chỉ: `<web>/admin/`. Sửa sản phẩm, ảnh bìa, bài học, thông tin web; bấm Lưu là ghi thẳng vào kho này, khoảng 1 phút sau web cập nhật.
-- Đăng nhập bằng mã truy cập GitHub (fine-grained, chỉ kho `sona-web`, quyền Contents: Read and write). Mã chỉ lưu trên máy người quản trị.
-- Nút "Dùng thử" mở bằng dữ liệu thật nhưng không lưu gì.
+
+Vào `…/admin/` để sửa trang chủ, sản phẩm, bài viết, trang riêng, ảnh, liên hệ và SEO mà không cần sửa code.
+- Hướng dẫn dùng: `ADMIN_USER_GUIDE.md`
+- Kiến trúc và phạm vi: `ADMIN_IMPLEMENTATION_PLAN.md`
+- Triển khai, tên miền: `DEPLOYMENT_GUIDE.md`
+- Tình trạng: `PROJECT_STATUS.md`

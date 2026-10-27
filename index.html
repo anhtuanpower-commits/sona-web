@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>SONA</title>
+<!--seo:dau--><title>SONA</title>
 <meta name="description" content="Công cụ AI đơn giản cho người kinh doanh bận rộn: tài liệu, app và dịch vụ dùng được ngay.">
-<meta name="theme-color" content="#07070a">
 <link rel="icon" href="img/favicon.png">
+<meta property="og:image" content="img/logo-full.jpg"><!--seo:cuoi-->
+<meta name="theme-color" content="#07070a">
 <link rel="apple-touch-icon" href="img/mark-192.png">
-<meta property="og:image" content="img/logo-full.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -174,11 +174,22 @@ footer{border-top:1px solid #ffffff0d;color:var(--m);font-size:14px;padding:26px
 .fsoc a.hot{background:linear-gradient(180deg,var(--a2),var(--a));color:var(--ink);border-color:transparent}.fsoc a.hot svg{color:var(--ink)}
 .fcopy{font-size:13px}
 .pd~footer,body.pdp footer{padding-bottom:100px}
+.hero .lead{margin:-12px auto 24px;max-width:620px;color:var(--m);font-size:15.5px}
+.banner{display:block;width:100%;max-width:680px;margin:0 auto 22px;border-radius:18px;border:1px solid var(--line);aspect-ratio:16/7;object-fit:cover}
+.hero .hero-cta{display:inline-flex;width:auto;margin:18px auto 0;padding:13px 26px}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}.gal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;border:1px solid var(--line);display:block}
+.art .body img{max-width:100%;border-radius:14px;border:1px solid var(--line);display:block;margin:16px 0}.art .body a{color:var(--a);text-decoration:underline}
+.flinks{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 18px;margin-bottom:12px}.flinks a{color:var(--m)}.flinks a:hover{color:var(--a2)}
+.pv-bar{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--a);color:var(--ink);font-size:13px;font-weight:700;text-align:center;padding:4px 10px}
+.cats[hidden],.search[hidden]{display:none}
+.art-in .body{font-size:15px;line-height:1.8}.art-in .body p{margin:0 0 10px;color:var(--m)}.art-in .body h2{font-size:16px;margin:18px 0 8px}.art-in .body ul{padding-left:20px;color:var(--m)}.art-in .body img{max-width:100%;border-radius:12px}.art-in .body a{color:var(--a);text-decoration:underline}
+.art-in .body blockquote{margin:12px 0;padding:12px 14px;border-left:3px solid var(--a);background:var(--s2);border-radius:12px;position:relative}.art-in .body blockquote .cp{position:absolute;right:10px;top:6px}.art-in .body blockquote p{margin:0;padding-right:44px;color:var(--t)}
+body.pv{padding-top:28px}body.pv header{top:28px}
 .toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:var(--t);color:var(--ink);font-weight:600;border-radius:999px;padding:10px 18px;z-index:60;display:none}
 </style></head><body>
 <header><div class="wrap bar"><a class="brand" href="#" id="brand" aria-label="SONA, về trang chủ"><img class="mark" src="img/mark-192.png" alt="" width="38" height="38"><span class="word" id="siteName">SONA</span></a><nav class="nav" aria-label="Mục chính"><a href="#" id="navSp">Sản phẩm</a><a href="#hoc" id="navHoc">Học AI</a><a href="#thong-tin" id="navInfo"><span class="lg">Thông tin SONA</span><span class="sh">Thông tin</span></a></nav><a class="zalo" id="zaloTop" hidden target="_blank" rel="noopener">Zalo<span class="lg"> hỗ trợ</span></a></div></header>
 <main class="wrap" id="app"></main>
-<footer><div class="wrap"><div class="fsoc" id="fsoc"></div><div class="fcopy" id="foot">SONA</div></div></footer>
+<footer><div class="wrap"><div class="fsoc" id="fsoc"></div><nav class="flinks" id="flinks" aria-label="Trang khác"></nav><div class="fcopy" id="foot">SONA</div></div></footer>
 <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="payTitle"><div class="panel" id="panel"></div></div>
 <div class="toast" id="toast" role="status"></div>
 <script>
@@ -201,15 +212,31 @@ const iconOf=p=>({App:ICON.app,"Dịch vụ":ICON.svc}[catOf(p)]||ICON.doc);
 const fmt=n=>Number(n).toLocaleString("vi-VN")+"đ";
 const priceHtml=g=>{const v=priceOf(g);if(!g||!g.gia_niem_yet||!g.so_tien||g.gia_niem_yet<=g.so_tien)return esc(v);const pc=Math.round((1-g.so_tien/g.gia_niem_yet)*100);return`${esc(v)}<span class="was">${fmt(g.gia_niem_yet)}</span><span class="off">-${pc}%</span>`};
 const priceOf=g=>g?(g.so_tien?Number(g.so_tien).toLocaleString("vi-VN")+"đ":String(g.gia||"").split("(")[0].trim()):"";
-let SITE={},PRODUCTS=[],POSTS=[],Q="",CAT="",TOPIC="";
+let SITE={},PRODUCTS=[],POSTS=[],PAGES=[],Q="",CAT="",TOPIC="";
+/* Xem trước từ trang Admin: dữ liệu chưa lưu nằm tạm trong máy, chỉ dùng khi mở với ?preview=1 */
+const PREVIEW=/[?&]preview=1(&|$)/.test(location.search);
+const TC=()=>SITE.trang_chu||{};
+const BUY_STEPS=["Chọn sản phẩm, bấm Sử dụng ngay, quét mã QR bằng app ngân hàng.","Nhắn Zalo SONA mã đơn hiện trên màn hình.","SONA gửi sản phẩm qua Zalo trong giờ làm việc 8h–20h."];
+const buySteps=()=>{const c=SITE.thong_tin?.cach_mua;return Array.isArray(c)&&c.length?c:BUY_STEPS};
+const logoSrc=()=>SITE.logo||"img/mark-192.png";
+function setMeta(title,desc){document.title=title;const m=document.querySelector('meta[name="description"]');if(m&&desc)m.content=String(desc).slice(0,300)}
 const zaloUrl=()=>SITE.zalo?"https://zalo.me/"+String(SITE.zalo).replace(/\D/g,""):"";
 function toast(t){const e=$("#toast");e.textContent=t;e.style.display="block";clearTimeout(toast.t);toast.t=setTimeout(()=>e.style.display="none",1800)}
 async function copy(t){try{await navigator.clipboard.writeText(t);toast("Đã sao chép")}catch(e){toast("Giữ tay vào chữ để sao chép")}}
 async function load(){
   try{[SITE,PRODUCTS]=await Promise.all([fetch("site.json").then(r=>r.json()),fetch("products.json").then(r=>r.json())])}catch(e){SITE={};PRODUCTS=[]}
-  try{POSTS=await fetch("posts.json",{cache:"no-cache"}).then(r=>r.json());POSTS.sort((a,b)=>String(b.ngay).localeCompare(String(a.ngay)))}catch(e){POSTS=[]}
+  try{POSTS=await fetch("posts.json",{cache:"no-cache"}).then(r=>r.json())}catch(e){POSTS=[]}
+  try{PAGES=await fetch("pages.json",{cache:"no-cache"}).then(r=>r.ok?r.json():[])}catch(e){PAGES=[]}
+  if(PREVIEW){try{const d=JSON.parse(localStorage.getItem("sona_xem_truoc"));if(d&&Date.now()-d.t<7200000){SITE=d.site||SITE;PRODUCTS=d.products||PRODUCTS;POSTS=d.posts||POSTS;PAGES=d.pages||PAGES}}catch(e){}
+    document.body.classList.add("pv");const b=document.createElement("div");b.className="pv-bar";b.textContent="Bản xem trước · chưa lên web thật";document.body.prepend(b)}
+  else{PRODUCTS=PRODUCTS.filter(p=>!p.an);POSTS=POSTS.filter(a=>a.trang_thai!=="nhap");PAGES=PAGES.filter(x=>x.trang_thai!=="nhap")}
+  if(!Array.isArray(PRODUCTS))PRODUCTS=[];if(!Array.isArray(POSTS))POSTS=[];if(!Array.isArray(PAGES))PAGES=[];
+  POSTS.sort((a,b)=>String(b.ngay).localeCompare(String(a.ngay)));
+  $("#siteName").textContent=SITE.ten_web||"SONA";document.querySelectorAll(".mark").forEach(i=>i.src=logoSrc());
+  if(SITE.favicon){const l=document.querySelector('link[rel="icon"]');if(l)l.href=SITE.favicon}
   if(zaloUrl()){const z=$("#zaloTop");z.href=zaloUrl();z.hidden=false}
-  $("#foot").textContent="© "+(SITE.ten_web||"SONA")+" · "+(SITE.slogan||"Công nghệ tiện ích cho mọi người")+(SITE.email?" · "+SITE.email:"");
+  $("#foot").textContent=SITE.chan_trang||"© "+(SITE.ten_web||"SONA")+" · "+(SITE.slogan||"Công nghệ tiện ích cho mọi người")+(SITE.email?" · "+SITE.email:"");
+  $("#flinks").innerHTML=PAGES.filter(x=>x.hien_chan_trang).map(x=>`<a href="#trang/${esc(x.slug)}">${esc(x.tieu_de)}</a>`).join("");
   const S=SITE.mang_xa_hoi||{};const hot=SITE.hotline||"";const ok=u=>/^https:\/\//.test(u||"");
   const SI={fb:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8z"/></svg>',
     tt:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.4 2.3 1.9 3.8 4 4v3.2c-1.5 0-2.9-.4-4-1.2V15a6 6 0 1 1-6-6v3.3A2.8 2.8 0 1 0 12.8 15V3z"/></svg>',
@@ -221,12 +248,13 @@ async function load(){
     ok(S.youtube)&&`<a href="${esc(S.youtube)}" target="_blank" rel="noopener">${SI.yt}YouTube</a>`,
     zaloUrl()&&`<a href="${zaloUrl()}" target="_blank" rel="noopener">${ICON.chat}Zalo ${esc(SITE.zalo)}</a>`].filter(Boolean).join("");
   route()}
-function route(){const h=location.hash;closePay();
+function route(){const h=location.hash||(window.SONA_ROUTE?"#"+window.SONA_ROUTE:"");closePay();
+  const pm=h.match(/^#trang\/([\w-]+)/);const pg=pm&&PAGES.find(x=>x.slug===pm[1]);
   const m=h.match(/^#sp\/([\w-]+)/);const p=m&&PRODUCTS.find(x=>x.slug===m[1]);
   const b=h.match(/^#bai\/([\w-]+)/);const a=b&&POSTS.find(x=>x.slug===b[1]);
   const t=h.match(/^#hoc\/(.+)$/);const hoc=/^#hoc/.test(h)||!!a;const info=/^#thong-tin/.test(h);
   document.body.classList.toggle("pdp",!!p);$("#navHoc").classList.toggle("on",hoc);$("#navInfo").classList.toggle("on",info);$("#navSp").classList.toggle("on",!hoc&&!info);
-  p?product(p):a?article(a):t?hocFolder(decodeURIComponent(t[1])):hoc?hocPage():info?infoPage():home();window.scrollTo(0,0)}
+  p?product(p):a?article(a):pg?pageView(pg):t?hocFolder(decodeURIComponent(t[1])):hoc?hocPage():info?infoPage():home();window.scrollTo(0,0)}
 /* ---------- gợi ý theo sở thích khách (chỉ trên web này, lưu trong máy khách) ---------- */
 const PREF_KEY="sona_quan_tam";
 function prefs(){try{return JSON.parse(localStorage.getItem(PREF_KEY))||{}}catch(e){return{}}}
@@ -236,11 +264,11 @@ function noteWords(q){norm(q).split(/\s+/).filter(w=>w.length>2).slice(0,5).forE
 function scoreOf(p){const P=prefs();let s=Number(p.tiem_nang)||50;s+=(P["loai:"+catOf(p)]||0)*4+(P["sp:"+p.slug]||0)*2;
   const hay=norm([p.ten,p.phu_de,p.cho_ai,...(p.loi_ich||[])].join(" "));Object.keys(P).filter(k=>k.startsWith("tu:")).forEach(k=>{if(hay.includes(k.slice(3)))s+=P[k]*3});return s}
 /* ---------- trang chủ ---------- */
-function home(){document.title=(SITE.ten_web||"SONA")+(SITE.khau_hieu?" · "+SITE.khau_hieu:"");
+function home(){const seo=SITE.seo||{};setMeta(seo.tieu_de||(SITE.ten_web||"SONA")+(SITE.khau_hieu?" · "+SITE.khau_hieu:""),seo.mo_ta);const tc=TC();
   const kh=esc(SITE.khau_hieu||"Công cụ AI đơn giản cho người kinh doanh bận rộn").replace(/\bAI\b/,"<span>AI</span>");
-  $("#app").innerHTML=`<section class="hero"><span class="eyebrow">${esc(SITE.slogan||"Công nghệ tiện ích cho mọi người")}</span><h1>${kh}</h1>
-    <div class="search" id="sbox">${ICON.search}<input id="q" type="search" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="Anh chị đang cần gì?" aria-label="Tìm sản phẩm"><button class="clr" id="clr" aria-label="Xóa tìm kiếm">×</button></div></section>
-    <nav class="cats" id="cats" aria-label="Loại sản phẩm"></nav><p class="grid-h" id="gridH"></p><div class="slider"><button class="arr prev" id="prev" aria-label="Sản phẩm trước">${ICON.arrow}</button><div class="grid" id="grid" aria-roledescription="carousel"></div><button class="hint" id="hint" hidden>Xem thêm ${ICON.arrow}</button><button class="arr next" id="next" aria-label="Sản phẩm sau">${ICON.arrow}</button><div class="dots" id="dots"></div></div>`;
+  $("#app").innerHTML=`<section class="hero">${tc.anh_banner?`<img class="banner" src="${esc(tc.anh_banner)}" alt="">`:""}<span class="eyebrow">${esc(SITE.slogan||"Công nghệ tiện ích cho mọi người")}</span><h1>${kh}</h1>${tc.mo_ta?`<p class="lead">${esc(tc.mo_ta)}</p>`:""}
+    <div class="search" id="sbox"${tc.an_o_tim?" hidden":""}>${ICON.search}<input id="q" type="search" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="${esc(tc.o_tim||"Anh chị đang cần gì?")}" aria-label="Tìm sản phẩm"><button class="clr" id="clr" aria-label="Xóa tìm kiếm">×</button></div>${tc.nut_chu&&tc.nut_link?`<a class="btn hero-cta" href="${esc(tc.nut_link)}"${/^https:/.test(tc.nut_link)?' target="_blank" rel="noopener"':""}>${esc(tc.nut_chu)} ${ICON.arrow}</a>`:""}</section>
+    <nav class="cats" id="cats" aria-label="Loại sản phẩm"${tc.an_loc_loai?" hidden":""}></nav><p class="grid-h" id="gridH"></p><div class="slider"><button class="arr prev" id="prev" aria-label="Sản phẩm trước">${ICON.arrow}</button><div class="grid" id="grid" aria-roledescription="carousel"></div><button class="hint" id="hint" hidden>Xem thêm ${ICON.arrow}</button><button class="arr next" id="next" aria-label="Sản phẩm sau">${ICON.arrow}</button><div class="dots" id="dots"></div></div>`;
   const q=$("#q");q.value=Q;$("#sbox").classList.toggle("has",!!Q);
   q.oninput=()=>{Q=q.value;$("#sbox").classList.toggle("has",!!Q);renderGrid()};
   q.onchange=()=>{if(q.value.trim())noteWords(q.value)};
@@ -255,7 +283,7 @@ function renderGrid(){
   document.querySelectorAll(".cat").forEach(b=>b.onclick=()=>{CAT=CAT===b.dataset.c?"":b.dataset.c;if(CAT)bump("loai:"+CAT,1);renderGrid()});
   let list=base.filter(p=>!CAT||catOf(p)===CAT).sort((a,b)=>scoreOf(b)-scoreOf(a));
   if(!CAT&&!words.length){const pick=[];["App","Dịch vụ","Tài liệu"].forEach(c=>pick.push(...list.filter(p=>catOf(p)===c).slice(0,3)));list=pick.sort((a,b)=>scoreOf(b)-scoreOf(a)).slice(0,6)}
-  $("#gridH").textContent=(words.length?list.length+" kết quả":CAT?CAT:list.length?"Gợi ý cho anh chị":"")+(list.length>1?" · vuốt ngang để xem tiếp":"");
+  $("#gridH").textContent=(words.length?list.length+" kết quả":CAT?CAT:list.length?(TC().tieu_de_goi_y||"Gợi ý cho anh chị"):"")+(list.length>1?" · vuốt ngang để xem tiếp":"");
   $("#grid").innerHTML=list.length?list.map(p=>`<a class="card" href="#sp/${esc(p.slug)}">${p.anh_bia?`<div class="thumb img"><img src="${esc(p.anh_bia)}" alt="${esc(p.ten)}" loading="lazy"></div>`:`<div class="thumb"><span class="t">${esc(catOf(p))}</span>${iconOf(p)}</div>`}
     <div class="in"><h2>${esc(p.ten)}</h2><p>${esc(p.phu_de)}</p><div class="foot"><span class="price">${priceHtml(p.goi?.[0])}</span><span class="go">${ICON.arrow}</span></div></div></a>`).join("")
     :`<div class="empty"><b>${words.length?"Chưa có sản phẩm phù hợp":CAT?CAT+" sắp ra mắt":"Sản phẩm đầu tiên sắp ra mắt"}</b>${words.length?"Anh chị thử từ khóa khác.":"SONA đang hoàn thiện, anh chị quay lại sau ít ngày nhé."}</div>`;
@@ -283,7 +311,7 @@ const fmtDate=d=>{const m=String(d||"").match(/(\d{4})-(\d{2})-(\d{2})/);return 
 const lessonCard=a=>`<a class="ls" href="#bai/${esc(a.slug)}"><span class="meta"><b>${esc(a.chu_de||"Kiến thức AI")}</b>· ${esc(fmtDate(a.ngay))} · ${esc(a.phut||3)} phút đọc</span><h3>${esc(a.tieu_de)}</h3><p>${esc(a.tom_tat)}</p></a>`;
 const FOLDER_ORDER=["Bắt đầu","Viết nội dung","Chăm khách","Bán hàng","Quản lý tiệm"];
 const folders=()=>{const m={};POSTS.forEach(a=>{const k=a.chu_de||"Kiến thức AI";(m[k]=m[k]||[]).push(a)});return Object.entries(m).sort((a,b)=>(FOLDER_ORDER.indexOf(a[0])+99)%99-(FOLDER_ORDER.indexOf(b[0])+99)%99)};
-function hocPage(){document.title="Học AI miễn phí · "+(SITE.ten_web||"SONA");
+function hocPage(){setMeta("Học AI miễn phí · "+(SITE.ten_web||"SONA"),"Bài học AI miễn phí cho người kinh doanh nhỏ, mỗi bài đọc khoảng 3 phút, làm được ngay.");
   $("#app").innerHTML=`<section class="hoc-hero"><span class="free">Miễn phí</span><h1>Học AI miễn phí</h1><p>Chọn một thư mục để xem bài. Mỗi bài đọc khoảng 3 phút, làm được ngay.</p></section>
   <div class="search" id="hbox" style="margin:18px 0 0;max-width:none">${ICON.search}<input id="hq" type="search" enterkeyhint="search" autocomplete="off" placeholder="Tìm bài học..." aria-label="Tìm bài học"><button class="clr" id="hclr" aria-label="Xóa tìm kiếm">×</button></div>
   <div class="folders" id="folders"></div>`;
@@ -295,37 +323,45 @@ function hocPage(){document.title="Học AI miễn phí · "+(SITE.ten_web||"SON
 function hocFolder(k){const ls=POSTS.filter(a=>(a.chu_de||"Kiến thức AI")===k);document.title=k+" · Học AI miễn phí";
   $("#app").innerHTML=`<a class="back" href="#hoc">← Học AI miễn phí</a><section class="hoc-hero" style="padding-top:10px"><h1>${esc(k)}</h1><p>${ls.length} bài</p></section><div class="lessons">${ls.map(lessonCard).join("")||`<div class="empty"><b>Thư mục này chưa có bài</b></div>`}</div>`}
 /* ---------- thông tin SONA ---------- */
-function infoPage(){document.title="Thông tin · "+(SITE.ten_web||"SONA");const t=SITE.thanh_toan||{};const S=SITE.mang_xa_hoi||{};
+function infoPage(){setMeta("Thông tin · "+(SITE.ten_web||"SONA"),SITE.thong_tin?.lam_gi);const t=SITE.thanh_toan||{};const S=SITE.mang_xa_hoi||{};
   const links=[["Zalo",zaloUrl(),SITE.zalo],["Facebook",S.facebook],["TikTok",S.tiktok],["YouTube",S.youtube]].filter(x=>x[1]);
-  $("#app").innerHTML=`<article class="art" style="padding-top:20px"><div class="about-logo"><img src="img/mark-192.png" alt="" width="72" height="72"></div>
-  <h1 style="text-align:center">SONA</h1><p class="muted" style="text-align:center;margin:0 0 24px">${esc(SITE.slogan||"Công nghệ tiện ích cho mọi người")}</p>
-  <section class="box"><h2>SONA làm gì</h2><p class="muted" style="margin:0">SONA làm công cụ AI đơn giản cho người kinh doanh nhỏ ở Việt Nam: tài liệu hướng dẫn, app dùng ngay trên điện thoại và dịch vụ cài sẵn. Mua một lần, không cần biết công nghệ.</p></section>
-  <section class="box" style="margin-top:14px"><h2>Mua như thế nào</h2><ol class="steps"><li>Chọn sản phẩm, bấm Sử dụng ngay, quét mã QR bằng app ngân hàng.</li><li>Nhắn Zalo SONA mã đơn hiện trên màn hình.</li><li>SONA gửi sản phẩm qua Zalo trong giờ làm việc 8h–20h.</li></ol></section>
-  <section class="box" style="margin-top:14px"><h2>Liên hệ</h2><div class="kv">${SITE.hotline?`<div><span>Hotline</span><b>${esc(SITE.hotline)}</b></div>`:""}${SITE.zalo?`<div><span>Zalo</span><b>${esc(SITE.zalo)}</b></div>`:""}${SITE.email?`<div><span>Email</span><b>${esc(SITE.email)}</b></div>`:""}${t.so_tai_khoan?`<div><span>Nhận tiền</span><b>${esc(t.ten_ngan_hang||"")} · ${esc(t.so_tai_khoan)} · ${esc(t.ten_tai_khoan||"")}</b></div>`:""}</div>
+  $("#app").innerHTML=`<article class="art" style="padding-top:20px"><div class="about-logo"><img src="${esc(logoSrc())}" alt="" width="72" height="72"></div>
+  <h1 style="text-align:center">${esc(SITE.ten_web||"SONA")}</h1><p class="muted" style="text-align:center;margin:0 0 24px">${esc(SITE.slogan||"Công nghệ tiện ích cho mọi người")}</p>
+  <section class="box"><h2>SONA làm gì</h2><p class="muted" style="margin:0">${esc(SITE.thong_tin?.lam_gi||"SONA làm công cụ AI đơn giản cho người kinh doanh nhỏ ở Việt Nam: tài liệu hướng dẫn, app dùng ngay trên điện thoại và dịch vụ cài sẵn. Mua một lần, không cần biết công nghệ.")}</p></section>
+  <section class="box" style="margin-top:14px"><h2>Mua như thế nào</h2><ol class="steps">${buySteps().map(x=>`<li>${esc(x)}</li>`).join("")}</ol></section>
+  <section class="box" style="margin-top:14px"><h2>Liên hệ</h2><div class="kv">${SITE.hotline?`<div><span>Hotline</span><b>${esc(SITE.hotline)}</b></div>`:""}${SITE.zalo?`<div><span>Zalo</span><b>${esc(SITE.zalo)}</b></div>`:""}${SITE.email?`<div><span>Email</span><b>${esc(SITE.email)}</b></div>`:""}${SITE.dia_chi?`<div><span>Địa chỉ</span><b>${esc(SITE.dia_chi)}</b></div>`:""}${t.so_tai_khoan?`<div><span>Nhận tiền</span><b>${esc(t.ten_ngan_hang||"")} · ${esc(t.so_tai_khoan)} · ${esc(t.ten_tai_khoan||"")}</b></div>`:""}</div>
   ${links.length?`<div class="fsoc" style="justify-content:flex-start;margin:14px 0 0">${links.map(([n,u])=>`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(n)}</a>`).join("")}</div>`:""}</section></article>`}
-function md(src){const inl=t=>esc(t).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>");const out=[];let ul=null;
+const safeUrl=u=>/^(https:\/\/|img\/|#)[^\s"'<>]*$/.test(u)&&!u.includes("..");
+function md(src){const inl=t=>esc(t).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/\[([^\]]+)\]\(([^)\s]+)\)/g,(m,x,u)=>safeUrl(u)?`<a href="${u}"${/^https/.test(u)?' target="_blank" rel="noopener"':""}>${x}</a>`:m);const out=[];let ul=null;
   String(src||"").split(/\n/).forEach(l=>{const t=l.trim();
     if(/^- /.test(t)){if(!ul){ul=[];out.push(ul)}ul.push("<li>"+inl(t.slice(2))+"</li>");return}ul=null;
-    if(!t)return;if(/^## /.test(t))out.push("<h2>"+inl(t.slice(3))+"</h2>");
+    if(!t)return;const im=t.match(/^!\[([^\]]*)\]\(([^)\s]+)\)$/);if(im&&safeUrl(im[2])){out.push(`<img src="${esc(im[2])}" alt="${esc(im[1])}" loading="lazy">`);return}
+    if(/^## /.test(t))out.push("<h2>"+inl(t.slice(3))+"</h2>");
     else if(/^> /.test(t)){const raw=t.slice(2);out.push(`<blockquote><button class="cp" data-cp="${esc(raw)}">Chép</button><p>${inl(raw)}</p></blockquote>`)}
     else out.push("<p>"+inl(t)+"</p>")});
   return out.map(x=>Array.isArray(x)?"<ul>"+x.join("")+"</ul>":x).join("")}
-function article(a){document.title=a.tieu_de+" · "+(SITE.ten_web||"SONA");const sp=a.sp&&PRODUCTS.find(p=>p.slug===a.sp);
+function article(a){setMeta((a.seo_tieu_de||a.tieu_de)+" · "+(SITE.ten_web||"SONA"),a.seo_mo_ta||a.tom_tat);const sp=a.sp&&PRODUCTS.find(p=>p.slug===a.sp);
   $("#app").innerHTML=`<article class="art"><a class="back" href="#hoc">← Học AI miễn phí</a>
   <div class="meta"><span class="free">Miễn phí</span><span>${esc(a.chu_de||"")}</span><span>${esc(fmtDate(a.ngay))}</span><span>${esc(a.phut||3)} phút đọc</span></div>
-  <h1>${esc(a.tieu_de)}</h1>${a.viec?`<div class="lamngay"><b>Làm ngay 1 việc</b><p>${esc(a.viec)}</p></div>`:""}<div class="body">${md(a.noi_dung)}</div>
+  <h1>${esc(a.tieu_de)}</h1>${a.anh?`<div class="cover"><img src="${esc(a.anh)}" alt="${esc(a.tieu_de)}"></div>`:""}${a.viec?`<div class="lamngay"><b>Làm ngay 1 việc</b><p>${esc(a.viec)}</p></div>`:""}<div class="body">${md(a.noi_dung)}</div>
   ${sp?`<div class="cta"><b>Muốn có đủ bộ mẫu dùng ngay?</b><p>${esc(sp.ten)} · ${esc(priceOf(sp.goi?.[0]))}</p><a class="btn" href="#sp/${esc(sp.slug)}">Xem sản phẩm ${ICON.arrow}</a></div>`:""}
   </article>`;document.querySelectorAll("[data-cp]").forEach(b=>b.onclick=()=>copy(b.dataset.cp))}
+/* ---------- trang riêng tạo trong Admin ---------- */
+function pageView(pg){setMeta((pg.seo_tieu_de||pg.tieu_de)+" · "+(SITE.ten_web||"SONA"),pg.seo_mo_ta);
+  $("#app").innerHTML=`<article class="art" style="padding-top:20px"><h1>${esc(pg.tieu_de)}</h1>${pg.anh?`<div class="cover"><img src="${esc(pg.anh)}" alt="${esc(pg.tieu_de)}"></div>`:""}<div class="body">${md(pg.noi_dung)}</div></article>`;
+  document.querySelectorAll("[data-cp]").forEach(b=>b.onclick=()=>copy(b.dataset.cp))}
 /* ---------- trang sản phẩm ---------- */
 let GI=0;
-function product(p){GI=0;noteProduct(p,1);document.title=p.ten+" · "+(SITE.ten_web||"SONA");
+function product(p){GI=0;noteProduct(p,1);setMeta((p.seo_tieu_de||p.ten)+" · "+(SITE.ten_web||"SONA"),p.seo_mo_ta||p.phu_de);
   const goi=p.goi||[];const g=goi[0]||{};
   $("#app").innerHTML=`<a class="back" href="#">← Tất cả sản phẩm</a>
   <div class="pd"><div class="main">
     ${p.anh_bia?`<div class="cover"><img src="${esc(p.anh_bia)}" alt="${esc(p.ten)}"></div>`:""}
     <div class="pd-top"><span class="t">${esc(catOf(p))}</span><h1>${esc(p.ten)}</h1><p>${esc(p.phu_de)}</p></div>
     ${(p.loi_ich||[]).length?`<section class="box"><h2>Anh chị nhận được</h2><ul class="ticks">${p.loi_ich.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></section>`:""}
-    <section class="box"><h2>Mua trong 3 bước</h2><ol class="steps"><li>Bấm Sử dụng ngay, quét mã QR bằng app ngân hàng.</li><li>Nhắn Zalo SONA mã đơn hiện trên màn hình.</li><li>SONA gửi sản phẩm qua Zalo trong giờ làm việc 8h–20h.</li></ol></section>
+    ${p.noi_dung?`<section class="box art-in"><h2>Chi tiết</h2><div class="body">${md(p.noi_dung)}</div></section>`:""}
+    ${(p.anh_minh_hoa||[]).length?`<section class="box"><h2>Hình ảnh</h2><div class="gal">${p.anh_minh_hoa.map(u=>`<a href="${esc(u)}" target="_blank" rel="noopener"><img src="${esc(u)}" alt="${esc(p.ten)}" loading="lazy"></a>`).join("")}</div></section>`:""}
+    <section class="box"><h2>Mua trong ${buySteps().length} bước</h2><ol class="steps">${SITE.thong_tin?.cach_mua?.length?buySteps().map(x=>`<li>${esc(x)}</li>`).join(""):`<li>Bấm Sử dụng ngay, quét mã QR bằng app ngân hàng.</li><li>Nhắn Zalo SONA mã đơn hiện trên màn hình.</li><li>SONA gửi sản phẩm qua Zalo trong giờ làm việc 8h–20h.</li>`}</ol></section>
     ${(p.cau_hoi||[]).length?`<section class="box"><h2>Câu hỏi hay gặp</h2>${p.cau_hoi.map(q=>`<details><summary>${esc(q.hoi)}</summary><p>${esc(q.dap)}</p></details>`).join("")}</section>`:""}
   </div>
   <aside class="side"><section class="box buy">
@@ -336,6 +372,7 @@ function product(p){GI=0;noteProduct(p,1);document.title=p.ten+" · "+(SITE.ten_
   </section></aside></div>
   <div class="sticky"><span class="price" id="stPrice">${priceHtml(g)}</span><button class="btn" id="buy2">Sử dụng ngay</button></div>`;
   document.querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>{GI=+b.dataset.g;document.querySelectorAll("[data-g]").forEach(x=>x.classList.toggle("on",x===b));const x=goi[GI];$("#bigPrice").innerHTML=priceHtml(x);$("#stPrice").innerHTML=priceHtml(x);$("#goiInfo").textContent=[x.ten,x.mo_ta].filter(Boolean).join(" · ")});
+  document.querySelectorAll("#app [data-cp]").forEach(b=>b.onclick=()=>copy(b.dataset.cp));
   $("#buy").onclick=$("#buy2").onclick=()=>openPay(p,goi[GI]||{})}
 /* ---------- thanh toán ---------- */
 const orderCode=p=>(p.ma||"SONA")+" "+Date.now().toString(36).slice(-5).toUpperCase();

@@ -1,0 +1,42 @@
+# Mỗi lần dữ liệu web thay đổi (sửa trong Admin, bài học tự động, app Nhà máy):
+# 1. Kiểm tra dữ liệu hợp lệ. Có lỗi thì lần chạy báo đỏ và GitHub gửi email cho chủ kho.
+# 2. Tạo trang SEO riêng cho từng sản phẩm, bài viết, trang; sitemap.xml; robots.txt.
+name: Kiểm tra dữ liệu và tạo trang SEO
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: cap-nhat-web-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  cap-nhat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Kiểm tra dữ liệu
+        run: node scripts/kiem-tra-du-lieu.js
+      - name: Kiểm tra code
+        run: node --test "tests/*.test.js"
+      - name: Tạo trang SEO, sitemap.xml, robots.txt
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        run: node scripts/tao-trang-seo.js
+      - name: Lưu trang SEO vào kho
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "Trang SEO đã mới nhất"; exit 0; fi
+          git commit -m "Cập nhật trang SEO tự động"
+          for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break; sleep 5; done
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" >/dev/null || echo "Không yêu cầu được GitHub Pages dựng lại, lần lưu sau sẽ cập nhật"
