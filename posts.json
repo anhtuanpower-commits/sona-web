@@ -1,5 +1,15 @@
 [
   {
+    "slug": "tin-tuyen-tho-moi-bang-ai",
+    "tieu_de": "Nhờ AI viết tin tuyển thợ rõ ràng trong 3 phút",
+    "tom_tat": "Một câu lệnh chép-dán để AI viết tin tuyển thợ có đủ việc làm, yêu cầu, lương và giờ làm.",
+    "chu_de": "Quản lý tiệm",
+    "ngay": "2026-10-29",
+    "phut": 3,
+    "viec": "Hôm nay nhờ AI viết 1 tin tuyển thợ có ghi rõ lương và giờ làm, rồi đăng lên nhóm Facebook tìm việc.",
+    "noi_dung": "Tin tuyển thợ mà thiếu lương, thiếu giờ làm thì người ta phải nhắn hỏi lại, nhiều người bỏ qua luôn. Bài này giúp anh chị viết một tin đủ ý chỉ bằng một câu lệnh.\n\n## Câu lệnh chép-dán\n\n> Bạn là chủ tiệm [nail/spa/tóc] tên [tên tiệm] ở [quận, thành phố]. Viết giúp tôi một tin tuyển [số người] thợ [loại thợ] để đăng Facebook, dưới 150 chữ, giọng thân thiện. Tin phải có đủ 4 phần: việc phải làm hằng ngày, yêu cầu (tay nghề, kinh nghiệm), lương và cách tính [ví dụ: lương cứng + phần trăm theo lượt], giờ làm và ngày nghỉ. Cuối tin ghi: nhắn Zalo [số Zalo] để hẹn gặp. Không hứa điều tôi chưa ghi.\n\n## Cách làm\n\n- Mở ChatGPT, chép câu lệnh trên vào.\n- Thay chữ trong ngoặc vuông bằng thông tin thật của tiệm.\n- Đọc lại tin AI viết, **sửa ngay chỗ nào sai lương hoặc giờ làm**.\n- Đăng lên nhóm Facebook tìm việc làm đẹp ở khu mình.\n\n## Lưu ý\n\n- **Ghi rõ lương và cách chia tiền**: người xin việc quyết nhanh hơn khi thấy con số.\n- Khi có người nhắn, hỏi mọi người **cùng 3 đến 5 câu giống nhau** để dễ so sánh, rồi hẹn 2 đến 3 người tốt nhất đến làm thử.\n- Không viết những gì tiệm chưa chắc làm được, như thưởng hay bao ăn ở."
+  },
+  {
     "slug": "kich-ban-video-ngan-30-giay-bang-ai",
     "tieu_de": "Nhờ AI viết kịch bản video 30 giây để tự quay ở tiệm",
     "tom_tat": "Một câu lệnh chia video thành 4 cảnh, ghi rõ quay gì và chữ hiện gì, kèm dòng chú thích để đăng.",
