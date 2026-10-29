@@ -1,5 +1,15 @@
 [
   {
+    "slug": "noi-quy-huy-doi-lich-bang-ai",
+    "tieu_de": "Nhờ AI viết nội quy hủy và dời lịch ngắn gọn, lịch sự",
+    "tom_tat": "Một câu lệnh để AI viết nội quy hủy, dời lịch và đến trễ, đủ ngắn để dán ở quầy và gửi qua Zalo.",
+    "chu_de": "Quản lý tiệm",
+    "ngay": "2026-10-30",
+    "phut": 3,
+    "viec": "Hôm nay nhờ AI viết nội quy hủy và dời lịch 3 ý, rồi ghim lên trang Zalo hoặc dán ở quầy.",
+    "noi_dung": "Khách hủy sát giờ hoặc không đến làm tiệm mất cả buổi. Một nội quy ngắn, nói trước rõ ràng, giúp khách hiểu mà không thấy bị làm khó.\n\n## Câu lệnh chép-dán\n\n> Bạn là chủ tiệm [nail/spa/tóc] tên [tên tiệm]. Viết giúp tôi nội quy hủy và dời lịch dưới 80 chữ, giọng nhẹ nhàng, lịch sự. Chỉ gồm 3 ý: khách báo hủy hoặc dời lịch trước ít nhất [số] giờ qua Zalo [số Zalo]; khách đến trễ quá [số] phút thì tiệm có thể rút ngắn dịch vụ hoặc hẹn lại; tiền cọc [được trả lại/được chuyển sang lần sau/không trả lại] khi hủy sát giờ. Cuối cùng cảm ơn khách. Không thêm điều gì tôi chưa ghi.\n\n## Cách làm\n\n- Mở ChatGPT, chép câu lệnh trên vào.\n- Thay chữ trong ngoặc vuông bằng cách tiệm đang làm thật.\n- Đọc lại, **sửa ngay chỗ nào AI tự thêm luật mới**.\n- Ghim lên trang Zalo của tiệm, dán ở quầy, và gửi kèm khi xác nhận lịch.\n\n## Lưu ý\n\n- Nhiều tiệm chọn báo trước **24 giờ**; dịch vụ dài như làm tóc cô dâu có thể cần lâu hơn.\n- Có thể **bỏ qua cho khách quen** lần đầu, chỉ nhắc nhẹ.\n- Nội quy chỉ có tác dụng khi khách **đọc được trước** lúc đặt lịch."
+  },
+  {
     "slug": "tin-tuyen-tho-moi-bang-ai",
     "tieu_de": "Nhờ AI viết tin tuyển thợ rõ ràng trong 3 phút",
     "tom_tat": "Một câu lệnh chép-dán để AI viết tin tuyển thợ có đủ việc làm, yêu cầu, lương và giờ làm.",
