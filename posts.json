@@ -1,5 +1,15 @@
 [
   {
+    "slug": "bang-viec-mo-dong-cua-tiem-bang-ai",
+    "tieu_de": "Nhờ AI viết bảng việc mở cửa và đóng cửa tiệm",
+    "tom_tat": "Một câu lệnh để AI viết bảng việc mở cửa và đóng cửa, in ra dán ở quầy cho thợ tích mỗi ngày.",
+    "chu_de": "Quản lý tiệm",
+    "ngay": "2026-10-31",
+    "phut": 3,
+    "viec": "Hôm nay nhờ AI viết bảng việc mở cửa và đóng cửa tiệm, in ra dán ở quầy.",
+    "noi_dung": "Chủ tiệm không có mặt thì việc nhỏ hay bị quên: chưa tắt máy, chưa đổ rác, chưa xem lịch hẹn. Một bảng việc dán ở quầy giúp thợ nào cũng làm giống nhau.\n\n## Câu lệnh chép-dán\n\n> Bạn là chủ tiệm [nail/spa/tóc] tên [tên tiệm]. Viết giúp tôi bảng việc mỗi ngày, chia 2 phần: Mở cửa và Đóng cửa, mỗi phần tối đa 10 dòng, mỗi dòng một việc ngắn có ô vuông để tích. Dùng đúng các việc tiệm tôi đang làm: [liệt kê việc, ví dụ: bật đèn, xem lịch hẹn hôm nay, khử trùng dụng cụ, đếm tiền lẻ, tắt máy sấy, đổ rác, khóa cửa]. Cuối bảng có dòng: Người làm, Ngày, Giờ. Không thêm việc tôi chưa ghi.\n\n## Cách làm\n\n- Mở ChatGPT, chép câu lệnh trên vào.\n- Thay chữ trong ngoặc vuông bằng việc tiệm làm thật, **càng cụ thể càng tốt**.\n- Đọc lại, xóa việc AI tự thêm.\n- In ra, dán ở quầy; mỗi ngày người mở và người đóng cửa tích rồi ký tên.\n\n## Lưu ý\n\n- Giữ mỗi phần **dưới 10 dòng** để thợ chịu làm.\n- Việc liên quan an toàn như **tắt máy nóng, khóa cửa** nên để cuối phần Đóng cửa.\n- Giữ lại tờ đã ký vài tuần để biết hôm nào ai đã làm."
+  },
+  {
     "slug": "noi-quy-huy-doi-lich-bang-ai",
     "tieu_de": "Nhờ AI viết nội quy hủy và dời lịch ngắn gọn, lịch sự",
     "tom_tat": "Một câu lệnh để AI viết nội quy hủy, dời lịch và đến trễ, đủ ngắn để dán ở quầy và gửi qua Zalo.",
