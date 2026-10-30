@@ -20,7 +20,7 @@
 
 Làm theo tài liệu "Hướng dẫn gắn tên miền cho web SONA" (bản Claude Docs đã gửi). Tóm tắt:
 
-1. Mua tên miền, tạo bản ghi DNS: 4 bản ghi **A** cho `@` trỏ về `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`; bản ghi **CNAME** `www` trỏ về `nguyenanhtuansonnam-coder.github.io`.
+1. Mua tên miền, tạo bản ghi DNS: 4 bản ghi **A** cho `@` trỏ về `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`; bản ghi **CNAME** `www` trỏ về `anhtuanpower-commits.github.io`.
 2. Kho GitHub → **Settings → Pages → Custom domain**: nhập tên miền, Save, đợi kiểm tra xong thì bật **Enforce HTTPS**.
 3. Vào Admin → **SEO** → **Địa chỉ web chính thức**: đổi thành `https://tenmien/` rồi lưu, để sitemap, robots.txt và link chia sẻ dùng tên miền mới.
 4. Admin mới ở `https://tenmien/admin/`. Mã truy cập không đổi, chỉ cần đăng nhập lại.

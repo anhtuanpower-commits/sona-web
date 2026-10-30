@@ -7,7 +7,7 @@ export const REPO = (() => {
   const p = location.pathname.split("/").filter(Boolean);
   if (m && p[0] && p[0] !== "admin") return { owner: m[1], repo: p[0] };
   if (m) return { owner: m[1], repo: m[1] + ".github.io" };
-  return { owner: "nguyenanhtuansonnam-coder", repo: "sona-web" };
+  return { owner: "anhtuanpower-commits", repo: "sona-web" };
 })();
 export const BRANCH = "main";
 export const FILES = { site: "site.json", products: "products.json", posts: "posts.json", pages: "pages.json" };

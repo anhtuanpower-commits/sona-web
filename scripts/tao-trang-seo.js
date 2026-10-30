@@ -16,7 +16,7 @@ const clip = (s, n) => { s = String(s || "").replace(/\s+/g, " ").trim(); return
 export function baseUrl(site, env = {}) {
   const set = site?.seo?.dia_chi_web;
   if (set) return set.endsWith("/") ? set : set + "/";
-  const [owner, repo] = String(env.GITHUB_REPOSITORY || "nguyenanhtuansonnam-coder/sona-web").split("/");
+  const [owner, repo] = String(env.GITHUB_REPOSITORY || "anhtuanpower-commits/sona-web").split("/");
   return repo.toLowerCase() === owner.toLowerCase() + ".github.io" ? `https://${repo}/` : `https://${owner.toLowerCase()}.github.io/${repo}/`;
 }
 const abs = (base, u) => !u ? "" : /^https?:\/\//.test(u) ? u : base + String(u).replace(/^\.?\//, "");
