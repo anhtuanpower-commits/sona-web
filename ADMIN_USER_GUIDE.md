@@ -6,14 +6,14 @@ Trang quản trị giúp anh chị tự sửa web SONA mà không cần đụng 
 
 | Khi nào | Địa chỉ |
 |---|---|
-| Hiện tại | https://nguyenanhtuansonnam-coder.github.io/sona-web/admin/ |
+| Hiện tại | https://anhtuanpower-commits.github.io/sona-web/admin/ |
 | Sau khi gắn tên miền riêng | https://tenmien-cua-anh/admin/ |
 
 Admin là một thư mục `admin/` nằm cùng web, nên đổi tên miền thì Admin đổi theo, không phải làm gì thêm.
 
 ## 2. Tạo tài khoản Admin đầu tiên (làm một lần)
 
-Tài khoản Admin chính là **tài khoản GitHub đang giữ kho web** (`nguyenanhtuansonnam-coder`). Không có mật khẩu mặc định nào nằm trong code. Để đăng nhập, anh chị tạo một **mã truy cập** (giống chìa khóa riêng cho Admin):
+Tài khoản Admin chính là **tài khoản GitHub đang giữ kho web** (`anhtuanpower-commits`). Không có mật khẩu mặc định nào nằm trong code. Để đăng nhập, anh chị tạo một **mã truy cập** (giống chìa khóa riêng cho Admin):
 
 1. Đăng nhập GitHub, mở https://github.com/settings/personal-access-tokens/new
 2. **Token name**: `Quản trị SONA`. **Expiration**: 90 ngày (hết hạn thì tạo mã mới, mã cũ tự mất tác dụng).
@@ -104,14 +104,14 @@ Link chia sẻ đẹp: sản phẩm `…/sp/duong-dan/`, bài viết `…/bai/du
 ## 12. Thêm người quản trị
 
 1. Người đó tạo tài khoản GitHub.
-2. Chủ kho mở https://github.com/nguyenanhtuansonnam-coder/sona-web/settings/access → **Add people**, chọn quyền **Write** (được sửa) hoặc **Read** (chỉ xem).
+2. Chủ kho mở https://github.com/anhtuanpower-commits/sona-web/settings/access → **Add people**, chọn quyền **Write** (được sửa) hoặc **Read** (chỉ xem).
 3. Người đó tự tạo mã truy cập của mình (mục 2) và đăng nhập.
 
 Gỡ quyền: bấm **Remove** ở cùng trang, người đó mất quyền sửa ngay. Admin chỉ có hai mức thực sự được GitHub kiểm soát: **sửa được** hoặc **chỉ xem**.
 
 ## 13. Lỡ sửa sai
 
-Mọi lần lưu đều nằm trong lịch sử GitHub: https://github.com/nguyenanhtuansonnam-coder/sona-web/commits/main. Xem được ai sửa gì, lúc nào, và khôi phục bản cũ (nhờ người dựng web nếu chưa quen).
+Mọi lần lưu đều nằm trong lịch sử GitHub: https://github.com/anhtuanpower-commits/sona-web/commits/main. Xem được ai sửa gì, lúc nào, và khôi phục bản cũ (nhờ người dựng web nếu chưa quen).
 
 Nếu hai người sửa cùng một bài, trang hoặc sản phẩm, Admin sẽ chặn bản lưu cũ để không ghi đè bản mới. Chép phần đang sửa sang chỗ tạm, tải lại trang để lấy bản mới nhất, rồi bổ sung nội dung và lưu lại.
 

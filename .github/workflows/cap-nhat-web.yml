@@ -1,4 +1,4 @@
-# Mỗi lần dữ liệu web thay đổi (sửa trong Admin, bài học tự động, app Nhà máy):
+# Mỗi lần dữ liệu web thay đổi (sửa trong Admin, bài học tự động):
 # 1. Kiểm tra dữ liệu hợp lệ. Có lỗi thì lần chạy báo đỏ và GitHub gửi email cho chủ kho.
 # 2. Tạo trang SEO riêng cho từng sản phẩm, bài viết, trang; sitemap.xml; robots.txt.
 name: Kiểm tra dữ liệu và tạo trang SEO
